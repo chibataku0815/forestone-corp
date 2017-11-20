@@ -36,7 +36,7 @@ confirm "Is it OK to deploy? [y/n]"
 
 # -AでSSH鍵をサーバーでも利用
 # StrictHostKeyCheckingで初SSH接続時の[yes/no]を無視
-ssh -i ~/.ssh/id_rsa ${host} "
+ssh -A -o StrictHostKeyChecking=no ${host} "
     # Gitがあるか確認
     if ! type 'git' > /dev/null 2>&1; then
         echo 'git not found...'
