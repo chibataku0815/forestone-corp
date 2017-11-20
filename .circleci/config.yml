@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: "conoha deploy"
-          command: ssh -A -o root@133.130.101.97 StrictHostKeyChecking=no IdentitiesOnly=yes AddKeysToAgent=yes UseKeychain=yes TCPKeepAlive=yes Compression=yes GSSAPIAuthentication=no UseRoaming=no
+          command: ssh root@133.130.101.97 StrictHostKeyChecking=no IdentitiesOnly=yes AddKeysToAgent=yes UseKeychain=yes TCPKeepAlive=yes Compression=yes GSSAPIAuthentication=no UseRoaming=no
 
 workflows:
   version: 2
