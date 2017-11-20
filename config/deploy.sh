@@ -17,13 +17,26 @@ host=root@133.130.101.97
 
 #############ここまで#############
 
+# yes/noで応答
+function confirm () {
+    echo -n $1
+    read answer
+    case `echo $answer | tr y Y` in
+        Y*)
+        ;;
+        *)
+            echo "Bye."
+            exit
+        ;;
+    esac
+}
 
 # 本当にデプロイするか確認
 confirm "Is it OK to deploy? [y/n]"
 
 # -AでSSH鍵をサーバーでも利用
 # StrictHostKeyCheckingで初SSH接続時の[yes/no]を無視
-ssh -A -o StrictHostKeyChecking=no ${host} "
+ssh -i ~/.ssh/id_rsa ${host} "
     # Gitがあるか確認
     if ! type 'git' > /dev/null 2>&1; then
         echo 'git not found...'
