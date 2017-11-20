@@ -1,0 +1,13 @@
+.logo {
+  @include vender(display, flex);
+  justify-content: center;
+  align-items: center;
+
+  @include query(900) {
+    padding: 10px;
+  }
+
+  &__image {
+    max-width: 150px;
+  }
+}

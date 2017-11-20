@@ -1,0 +1,45 @@
+@mixin vender($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, -js-, "" {
+    #{$prefix}#{$property}: $value;
+  }
+}
+@function get_vw($size, $viewport: 768) {
+  $rate: 100 / $viewport;
+
+  @return $rate * $size * 1.3vw;
+}
+@mixin font-size($font_size: 10) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+
+  @media all and (min-width: 769px) {
+    font-size: $font_size * 1px;
+  }
+}
+@mixin gradient-top-lighten($color: $hoge, $lighten: 10) {
+  background-color: $color;
+
+  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+@mixin gradient-top-darken($color: $hoge, $darken: 10) {
+  background-color: $color;
+
+  @include background-image(linear-gradient(darken($color, $darken) 0%, $color 100%));
+}
+@mixin box_shadow($top, $left, $blur, $color, $inset: "") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+@mixin query($size) {
+  @media all and (max-width: $size + px) {
+    @content;
+  }
+}
+@mixin material-icons {
+  font-family: "Material Icons";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}

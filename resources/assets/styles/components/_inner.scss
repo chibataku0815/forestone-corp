@@ -1,0 +1,21 @@
+.inner {
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  &--space {
+    padding: 50px 0;
+
+    @include query(900) {
+      padding: 2vw 0;
+    }
+  }
+
+  &--small-space {
+    padding: 8px 0 0;
+
+    @include query(900) {
+      padding: 1vw 0;
+    }
+  }
+}

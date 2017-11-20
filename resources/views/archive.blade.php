@@ -6,7 +6,7 @@
   @include('partials/category-title')
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ __('商品がありません.', 'sage') }}
+      {{ __('記事がありません.', 'sage') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

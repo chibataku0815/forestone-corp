@@ -1,0 +1,28 @@
+.main-visual {
+  height: 35vw;
+  max-height: 300px;
+  background-size: cover;
+  @include vender(display, flex);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include query(900) {
+    background: unquote("rgba(#{$palette-grey-100}, 1)");
+  }
+
+  &__text {
+    width: 80%;
+    padding: 10px;
+    @include vender(display, flex);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+
+    @include query(900) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

@@ -1,30 +1,44 @@
+@import "~material-design-lite/src/_color-definitions.scss";
+// @import "~slick-carousel/slick/slick.scss";
+// @import "~slick-carousel/slick/slick-theme.scss";
 @import "common/mixin";
 
-@import "~material-design-lite/src/material-design-lite.scss";
-@import "common/variables";
+@import "variables/color-config";
+@import "variables/font-config";
 
-// Import npm dependencies
-@import "~font-awesome/scss/font-awesome";
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
 
-@import "common/typeSelector";
-@import "common/wrapper";
-@import "common/inner";
+/** Import theme styles */
+@import "common/global";
+@import "common/color";
 
+/** components */
+@import "components/background";
+@import "components/breadcrumbs";
 @import "components/buttons";
-@import "components/box";
 @import "components/card";
-@import "components/category-list";
 @import "components/chip";
-@import "components/color";
 @import "components/comments";
+@import "components/faq";
 @import "components/forms";
-@import "components/menu-header";
-@import "components/list";
+@import "components/inner";
 @import "components/logo";
-@import "components/wp-classes";
+@import "components/main-visual";
+@import "components/navigation";
+@import "components/pagetop";
+@import "components/privacy";
+@import "components/scroll-x";
 @import "components/tel";
+@import "components/text";
 @import "components/title";
-@import "components/topics";
+
+/** layouts */
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
@@ -32,7 +46,15 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-@import "common/scroll-x";
-@import "common/mdl";
+// /** js */
+// @import "~hiraku/scss/hiraku";
+@import "js/hiraku";
+@import "js/toggle";
+@import "js/slick";
+@import "js/dropdown";
+
+// wordpressbem例外対応
+@import "wordpress/dropdown";
+
+/** untility */
 @import "common/flex";
-@import "common/ie_hack";

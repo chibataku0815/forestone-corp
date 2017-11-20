@@ -32,7 +32,7 @@
       {!! get_the_posts_navigation() !!}
 
       @php
-        echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' )
+        echo do_shortcode( '' )
       @endphp
 
     </section>
@@ -40,8 +40,6 @@
     <section class="mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
       @include('partials/sidebar')
     </section>
-
-    @include('partials/content-flow')
 
   </article>
 @endsection

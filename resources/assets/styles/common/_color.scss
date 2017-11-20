@@ -1,0 +1,11 @@
+.color-primary {
+  background: unquote("rgba(#{$color-primary}, 1)");
+
+  &--light {
+    background: unquote("rgba(#{$color-primary-light}, 1)");
+  }
+
+  &--dark {
+    background: unquote("rgba(#{$color-primary-dark}, 1)");
+  }
+}

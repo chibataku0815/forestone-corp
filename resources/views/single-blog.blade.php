@@ -21,12 +21,6 @@
           </div>
         </div>
 
-        @php
-          echo do_shortcode( '[contact-form-7 id="382" title="買取、無料見積もり依頼" html_class="h-adr"]' )
-        @endphp
-
-        @include('partials/content-tel')
-
       </section>
 
 
@@ -38,10 +32,5 @@
 
 
       @if( in_category( array( 'blog', 'topics') ))
-
-      @else
-        @include('partials/content-flow')
-      @endif
-
-    @endwhile
+      @endwhile
   @endsection
