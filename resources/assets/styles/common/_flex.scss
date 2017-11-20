@@ -2,27 +2,50 @@
   @include vender(display, flex);
 
   &--center {
-    align-items: center;
+    @include vender(align-items, center);
     justify-content: center;
+  }
+
+  &--center-tablet {
+    @include query(tablet) {
+      @include vender(align-items, center);
+      justify-content: center;
+    }
+  }
+
+  &--center-phone {
+    @include query(phone) {
+      @include vender(align-items, center);
+      justify-content: center;
+    }
   }
 
   &--row-right {
     flex-direction: row;
+    @include vender(align-items, center);
     justify-content: flex-end;
-    flex-wrap: wrap;
   }
 
-  &--row-center {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+  &--row-right-tablet {
+    @include query(tablet) {
+      flex-direction: row;
+      @include vender(align-items, center);
+      justify-content: flex-end;
+    }
+  }
+
+  &--row-right-phone {
+    @include query(phone) {
+      flex-direction: row;
+      @include vender(align-items, center);
+      justify-content: flex-end;
+    }
   }
 
   &--row-left {
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    @include vender(align-items, center);
   }
 
   &--row-top {
@@ -37,7 +60,7 @@
 
   &--column-center {
     flex-direction: column;
-    align-items: center;
+    @include vender(align-items, center);
     justify-content: center;
   }
 
@@ -58,7 +81,7 @@
   }
 
   &--vertical-center {
-    align-items: center;
+    @include vender(align-items, center);
   }
 
   &--side-left {

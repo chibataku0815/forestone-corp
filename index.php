@@ -14,6 +14,19 @@
 
 get_header(); ?>
 
+<div class="grid grid--center">
+  <div class="3/5 1/2--tablet grid__cell grid__cell--order-2 flex flex--row-righ-phone">
+		<div>3</div>
+		<div>3</div>
+		<div>3</div>
+	</div>
+  <div class="1/5 1/2--tablet grid__cell grid__cell--order-1 flex flex--row-left">
+  	<div>1</div>
+		<div>1</div>
+		<div>1</div>
+  </div>
+</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -24,20 +37,12 @@ get_header(); ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-
 			<?php
 			endif;
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
 				get_template_part( 'template-parts/content', get_post_format() );
-
 			endwhile;
 
 			the_posts_navigation();
