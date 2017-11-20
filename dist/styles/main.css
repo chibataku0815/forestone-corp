@@ -16917,6 +16917,22 @@ label {
   }
 }
 
+.gird__cell--hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 800px) {
+  .gird__cell--hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .gird__cell--hide-phone {
+    display: none !important;
+  }
+}
+
 .\31\/2,
 .\32\/4,
 .\33\/6,

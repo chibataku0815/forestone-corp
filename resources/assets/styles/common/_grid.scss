@@ -241,7 +241,7 @@
   }
 }
 
-// Define order override classes.
+// desktop order
 @for $i from 1 through $grid-max-columns {
   .grid__cell--order-#{$i} {
     order: $i;
@@ -257,12 +257,31 @@
   }
 }
 
-// tablet order
+// phone order
 @include query(phone) {
   @for $i from 1 through $grid-max-columns {
     .grid__cell--order-#{$i}-phone.cell--order-#{$i}-pnone {
       order: $i;
     }
+  }
+}
+
+// desktop hide
+.gird__cell--hide {
+  display: none !important;
+}
+
+// tablet hide
+@include query(tablet) {
+  .gird__cell--hide-tablet {
+    display: none !important;
+  }
+}
+
+// phone hider
+@include query(phone) {
+  .gird__cell--hide-phone {
+    display: none !important;
   }
 }
 
