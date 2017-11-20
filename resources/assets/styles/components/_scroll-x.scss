@@ -1,6 +1,5 @@
 .scroll-x {
-  @include query(900) {
-    max-width: 100%;
+  @media (max-width: $grid-desktop-breakpoint - 1) {
     position: relative;
     overflow-x: scroll;
 
@@ -29,5 +28,8 @@
     &__table-heading {
       text-align: left;
     }
+  }
+  @media (max-width: $grid-tablet-breakpoint - 1) {
+    max-width: 100%;
   }
 }

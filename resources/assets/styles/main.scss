@@ -1,10 +1,12 @@
+@import "~material-design-lite/src/material-design-lite.scss";
 @import "~material-design-lite/src/_color-definitions.scss";
-// @import "~slick-carousel/slick/slick.scss";
-// @import "~slick-carousel/slick/slick-theme.scss";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
 @import "common/mixin";
+@import "common/variables";
 
-@import "variables/color-config";
-@import "variables/font-config";
+/** Import everything from autoload */
+@import "./autoload/**/*";
 
 /**
  * Import npm dependencies
@@ -13,6 +15,9 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+
+// 親テーマリセット用
+@import "theme/genesis";
 
 /** Import theme styles */
 @import "common/global";
@@ -37,6 +42,7 @@
 @import "components/tel";
 @import "components/text";
 @import "components/title";
+@import "components/wp-classes";
 
 /** layouts */
 @import "layouts/header";
@@ -46,15 +52,15 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-// /** js */
-// @import "~hiraku/scss/hiraku";
+/** js */
+@import "~hiraku/scss/hiraku";
 @import "js/hiraku";
 @import "js/toggle";
 @import "js/slick";
 @import "js/dropdown";
 
 // wordpressbem例外対応
-@import "wordpress/dropdown";
+@import "common/wordpress";
 
 /** untility */
 @import "common/flex";
