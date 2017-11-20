@@ -1,0 +1,39 @@
+/*
+Error: Invalid US-ASCII character "\xE8"
+        on line 19 of /Users/chibatakumi/Creative Cloud Files/SMS案件/カイゴジョブパートナー/docs/wp-content/themes/forestone-theme/resources/assets/styles/main.scss
+
+14:  * Prefix your imports with `~` to grab from node_modules/
+15:  * @see https://github.com/webpack-contrib/sass-loader#imports
+16:  *\/
+17: // @import "~some-node-module";
+18: 
+19: // 親テーマリセット用
+20: @import "theme/genesis";
+21: 
+22: /** Import theme styles *\/
+23: @import "common/global";
+24: @import "common/color";
+
+Backtrace:
+/Users/chibatakumi/Creative Cloud Files/SMS案件/カイゴジョブパートナー/docs/wp-content/themes/forestone-theme/resources/assets/styles/main.scss:19
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each_with_index'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:1321:in `find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/util.rb:930:in `check_sass_encoding'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/engine.rb:436:in `check_encoding!'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/engine.rb:392:in `_to_tree'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/engine.rb:281:in `render'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:400:in `run'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/rubygems/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver CC 2018/Adobe Dreamweaver CC 2018.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE8\"\A         on line 19 of /Users/chibatakumi/Creative Cloud Files/SMS案件/カイゴジョブパートナー/docs/wp-content/themes/forestone-theme/resources/assets/styles/main.scss\A \A 14:  * Prefix your imports with `~` to grab from node_modules/\A 15:  * @see https://github.com/webpack-contrib/sass-loader#imports\A 16:  */\A 17: // @import \"~some-node-module\";\A 18: \A 19: // 親テーマリセット用\A 20: @import \"theme/genesis\";\A 21: \A 22: /** Import theme styles */\A 23: @import \"common/global\";\A 24: @import \"common/color\";"; }

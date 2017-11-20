@@ -1,6 +1,7 @@
 .main-visual {
   height: 35vw;
   max-height: 300px;
+  background: url("../images/main-visual__bg.jpg") no-repeat center -1vw;
   background-size: cover;
   @include vender(display, flex);
   flex-direction: column;
