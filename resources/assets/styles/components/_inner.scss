@@ -6,7 +6,7 @@
   &--space {
     padding: 50px 0;
 
-    @include query(900) {
+    @include query(tablet) {
       padding: 2vw 0;
     }
   }
@@ -14,7 +14,7 @@
   &--small-space {
     padding: 8px 0 0;
 
-    @include query(900) {
+    @include query(tablet) {
       padding: 1vw 0;
     }
   }

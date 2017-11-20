@@ -114,22 +114,6 @@ function infofores_tone_co_jp_widgets_init() {
 add_action( 'widgets_init', 'infofores_tone_co_jp_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
- */
-function infofores_tone_co_jp_scripts() {
-	wp_enqueue_style( 'infofores-tone-co-jp-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'infofores-tone-co-jp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'infofores-tone-co-jp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'infofores_tone_co_jp_scripts' );
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -156,3 +140,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+// JavaScriptやCSSに付加されるWordPressのバージョン番号削除
+function remove_src_wp_ver( $dep ) {
+	$dep->default_version = '';
+}
+add_action( 'wp_default_scripts', 'remove_src_wp_ver' );
+add_action( 'wp_default_styles', 'remove_src_wp_ver' );
+
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
+function theme_enqueue_scripts() {
+	wp_enqueue_style( 'icon', 'https://fonts.googleapis.com/icon?family=Material+Icons' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/dist/styles/main.css' );
+	//親テーマのfunctions.js
+	wp_enqueue_script( 'functions', get_template_directory_uri() . '/dist/scripts/main.js' );
+}
+
+remove_action ( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action ( 'wp_print_styles', 'print_emoji_styles' );

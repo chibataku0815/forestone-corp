@@ -1,13 +1,3 @@
-@import "~material-design-lite/src/material-design-lite.scss";
-@import "~material-design-lite/src/_color-definitions.scss";
-@import "~slick-carousel/slick/slick.scss";
-@import "~slick-carousel/slick/slick-theme.scss";
-@import "common/mixin";
-@import "common/variables";
-
-/** Import everything from autoload */
-@import "./autoload/**/*";
-
 /**
  * Import npm dependencies
  *
@@ -15,13 +5,27 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "~material-design-lite/src/material-design-lite.scss";
+@import "~material-design-lite/src/_color-definitions.scss";
+@import "~hiraku/scss/hiraku";
+// @import "~slick-carousel/slick/slick.scss";
+// @import "~slick-carousel/slick/slick-theme.scss";
 
-// 親テーマリセット用
-@import "theme/genesis";
+// variables setting
+@import "variables/color-config";
+@import "variables/font-config";
+@import "variables/grid-config";
 
-/** Import theme styles */
+// common setting
+@import "common/mixin";
 @import "common/global";
+@import "common/grid";
 @import "common/color";
+
+/** layouts */
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
 
 /** components */
 @import "components/background";
@@ -42,25 +46,16 @@
 @import "components/tel";
 @import "components/text";
 @import "components/title";
-@import "components/wp-classes";
-
-/** layouts */
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
 
 /** js */
-@import "~hiraku/scss/hiraku";
 @import "js/hiraku";
 @import "js/toggle";
 @import "js/slick";
 @import "js/dropdown";
 
 // wordpressbem例外対応
-@import "common/wordpress";
+@import "wordpress/wp-classes";
+@import "wordpress/js-dropdown";
 
 /** untility */
 @import "common/flex";

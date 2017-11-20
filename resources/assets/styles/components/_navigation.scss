@@ -5,7 +5,7 @@
   justify-content: space-between;
 
   &--hide-phone {
-    @include query(900) {
+    @include query(tablet) {
       display: none;
     }
   }

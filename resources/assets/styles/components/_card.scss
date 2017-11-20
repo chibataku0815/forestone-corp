@@ -36,7 +36,7 @@
     border-bottom: 1px dotted unquote("rgba(#{$color-primary-dark}, 1)");
     font-size: 14px;
 
-    @include query(900) {
+    @include query(tablet) {
       min-height: fit-content;
     }
   }
@@ -53,7 +53,7 @@
     justify-content: center;
     align-items: center;
 
-    @include query(900) {
+    @include query(tablet) {
       padding: 10px;
       min-height: fit-content;
     }
