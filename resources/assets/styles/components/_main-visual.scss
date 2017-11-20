@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
 
-  @include query(900) {
+  @include query(tablet) {
     background: unquote("rgba(#{$palette-grey-100}, 1)");
   }
 
@@ -20,7 +20,7 @@
     align-items: center;
     font-size: 12px;
 
-    @include query(900) {
+    @include query(tablet) {
       width: 100%;
       padding: 0;
     }

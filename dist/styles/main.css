@@ -16793,7 +16793,7 @@ label {
   font-weight: bold;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .button {
     margin: 2vw;
     font-size: 13px;
@@ -16864,7 +16864,7 @@ label {
   font-size: 14px;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .card__text {
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
@@ -16895,7 +16895,7 @@ label {
           align-items: center;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .card__sub-text {
     padding: 10px;
     min-height: -webkit-fit-content;
@@ -16952,7 +16952,7 @@ label {
   padding: 50px 0;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .inner--space {
     padding: 2vw 0;
   }
@@ -16962,7 +16962,7 @@ label {
   padding: 8px 0 0;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .inner--small-space {
     padding: 1vw 0;
   }
@@ -16984,7 +16984,7 @@ label {
           align-items: center;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .logo {
     padding: 10px;
   }
@@ -17017,7 +17017,7 @@ label {
           align-items: center;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .main-visual {
     background: rgba(245,245,245, 1);
   }
@@ -17046,7 +17046,7 @@ label {
   font-size: 12px;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .main-visual__text {
     width: 100%;
     padding: 0;
@@ -17067,7 +17067,7 @@ label {
           justify-content: space-between;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .navigation--hide-phone {
     display: none;
   }
@@ -17223,13 +17223,13 @@ label {
   border-bottom: 1px dotted rgba(33,33,33, 1);
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .tel__number {
     border: none;
   }
 }
 
-@media all and (max-width: 419px) {
+@media screen and (max-width: 499px) {
   .tel__number {
     font-size: 7vw;
   }
@@ -17260,7 +17260,7 @@ label {
   text-align: center;
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .tel__text {
     padding: 2px;
     font-size: 2vw;
@@ -17272,7 +17272,7 @@ label {
   color: rgba(255,255,255, 1);
 }
 
-@media all and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .tel__text--bg {
     background: rgba(235,110,150, 1);
   }

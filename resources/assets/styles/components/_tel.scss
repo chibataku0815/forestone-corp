@@ -11,11 +11,11 @@
     line-height: 1.2;
     border-bottom: 1px dotted unquote("rgba(#{$palette-grey-900}, 1)");
 
-    @include query(900) {
+    @include query(tablet) {
       border: none;
     }
 
-    @include query(419) {
+    @include query(phone) {
       font-size: 7vw;
     }
   }
@@ -44,7 +44,7 @@
     font-size: 12px;
     text-align: center;
 
-    @include query(900) {
+    @include query(tablet) {
       padding: 2px;
       font-size: 2vw;
     }
@@ -53,7 +53,7 @@
       background: unquote("rgba(#{$color-primary-dark}, 1)");
       color: unquote("rgba(#{$color-white}, 1)");
 
-      @include query(900) {
+      @include query(tablet) {
         background: unquote("rgba(#{$color-primary-dark}, 1)");
       }
     }
