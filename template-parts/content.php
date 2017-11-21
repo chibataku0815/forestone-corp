@@ -9,10 +9,10 @@
 
 ?>
 <div class="grid">
-	<article class="1/2 grid__cell">
+	<article class="9/10 grid__cell">
 		<section>
 			<h3 class="title">About</h3>
-			<p>
+			<p class="text-box">
 				私たちForesonteは、幅広いスキルで、UI・UXデザイン、ブランディング、マーケティング、コピーライティング、プリント＆パッケージング・デザインなどのフロントエンド/バックエンド開発を含め、様々な事業の成長を創造しています。
 			</p>
 		</section>

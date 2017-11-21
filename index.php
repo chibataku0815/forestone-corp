@@ -13,7 +13,11 @@
  */
 
 get_header(); ?>
-		<main id="main" class="">
+		<main id="main" class="grid">
+			<div class="grid__cell 1/12 cell--hide-tablet f-color--blue-grey-50">
+
+			</div>
+			<div class="">
 		<?php
 		if ( have_posts() ) :
 
@@ -36,6 +40,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+	</div>
 		</main><!-- #main -->
 
 <?php

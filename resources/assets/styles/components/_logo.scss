@@ -1,12 +1,15 @@
 .logo {
   height: 100px;
-  font-size: 22px;
+  font-size: 20vw;
   letter-spacing: 5px;
   @include vender(display, flex);
   justify-content: center;
   align-items: center;
+  user-select: none;
+  z-index: 100;
 
   @include query(tablet) {
+    font-size: 22px;
     padding: 10px;
   }
 

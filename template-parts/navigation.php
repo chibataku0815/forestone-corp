@@ -1,5 +1,5 @@
 
-<button type="button" class="1/12 1/2--tablet grid__cell js-offcanvas-btn" >
+<button type="button" class="1/12 1/4--tablet grid__cell js-offcanvas-btn" >
   <span class="hiraku-open-btn-line"></span>
 </button>
 

@@ -22,12 +22,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<header class="">
+<div id="page" class="">
+	<header class="grid__cell 11/12">
 		<div class="grid flex flex--space-between">
-		  <div class="1/12 1/2--tablet grid__cell">
-			</div>
-		  <div class="logo 6/12 1/2--tablet grid__cell">
+		  <div class="logo 11/12 3/4--tablet grid__cell">
 		  	Forestone
 		  </div>
 
@@ -35,5 +33,4 @@
 		</div>
 
 	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">

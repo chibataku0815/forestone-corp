@@ -395,6 +395,7 @@ p {
 
 main {
   max-width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -848,6 +849,10 @@ label {
   }
 }
 
+.\31\/1 {
+  width: 100%;
+}
+
 .\31\/2,
 .\32\/4,
 .\33\/6,
@@ -1050,6 +1055,10 @@ label {
 }
 
 @media screen and (max-width: 499px) {
+  .\31\/1--phone {
+    width: 100%;
+  }
+
   .\31\/2--phone,
   .\32\/4--phone,
   .\33\/6--phone,
@@ -1253,6 +1262,10 @@ label {
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
+  .\31\/1--handheld {
+    width: 100%;
+  }
+
   .\31\/2--handheld,
   .\32\/4--handheld,
   .\33\/6--handheld,
@@ -1456,6 +1469,10 @@ label {
 }
 
 @media screen and (min-width: 500px) {
+  .\31\/1--handheld-and-up {
+    width: 100%;
+  }
+
   .\31\/2--handheld-and-up,
   .\32\/4--handheld-and-up,
   .\33\/6--handheld-and-up,
@@ -1659,6 +1676,10 @@ label {
 }
 
 @media screen and (max-width: 800px) {
+  .\31\/1--tablet {
+    width: 100%;
+  }
+
   .\31\/2--tablet,
   .\32\/4--tablet,
   .\33\/6--tablet,
@@ -1862,6 +1883,10 @@ label {
 }
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
+  .\31\/1--lap {
+    width: 100%;
+  }
+
   .\31\/2--lap,
   .\32\/4--lap,
   .\33\/6--lap,
@@ -2065,6 +2090,10 @@ label {
 }
 
 @media screen and (min-width: 801px) {
+  .\31\/1--lap-and-up {
+    width: 100%;
+  }
+
   .\31\/2--lap-and-up,
   .\32\/4--lap-and-up,
   .\33\/6--lap-and-up,
@@ -2268,6 +2297,10 @@ label {
 }
 
 @media screen and (max-width: 1024px) {
+  .\31\/1--desktop {
+    width: 100%;
+  }
+
   .\31\/2--desktop,
   .\32\/4--desktop,
   .\33\/6--desktop,
@@ -2471,6 +2504,10 @@ label {
 }
 
 @media screen and (min-width: 1025px) {
+  .\31\/1--desk {
+    width: 100%;
+  }
+
   .\31\/2--desk,
   .\32\/4--desk,
   .\33\/6--desk,
@@ -2674,6 +2711,10 @@ label {
 }
 
 @media screen and (min-width: 1160px) {
+  .\31\/1--widescreen {
+    width: 100%;
+  }
+
   .\31\/2--widescreen,
   .\32\/4--widescreen,
   .\33\/6--widescreen,
@@ -2877,6 +2918,10 @@ label {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .\31\/1--retina {
+    width: 100%;
+  }
+
   .\31\/2--retina,
   .\32\/4--retina,
   .\33\/6--retina,
@@ -5601,7 +5646,7 @@ label {
 
 .logo {
   height: 100px;
-  font-size: 22px;
+  font-size: 20vw;
   letter-spacing: 5px;
   -webkit-display: flex;
   -moz-display: flex;
@@ -5616,10 +5661,16 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 100;
 }
 
 @media screen and (max-width: 800px) {
   .logo {
+    font-size: 22px;
     padding: 10px;
   }
 }
@@ -5910,6 +5961,23 @@ label {
   .tel__text--bg {
     background: rgba(10,10,10, 1);
   }
+}
+
+.text-box {
+  padding: 10px;
+  border: 1px solid rgba(10,10,10, 1);
+  position: relative;
+}
+
+.text-box::before {
+  width: 5px;
+  height: 120px;
+  max-height: 100%;
+  content: '';
+  background: rgba(10,10,10, 1);
+  position: absolute;
+  top: 0;
+  left: -2px;
 }
 
 .text {
