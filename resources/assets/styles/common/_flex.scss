@@ -48,6 +48,22 @@
     @include vender(align-items, center);
   }
 
+  &--row-left-tablet {
+    @include query(tablet) {
+      flex-direction: row;
+      @include vender(align-items, center);
+      justify-content: flex-start;
+    }
+  }
+
+  &--row-left-phone {
+    @include query(phone) {
+      flex-direction: row;
+      @include vender(align-items, center);
+      justify-content: flex-start;
+    }
+  }
+
   &--row-top {
     flex-direction: row;
     align-items: flex-start;
@@ -64,16 +80,64 @@
     justify-content: center;
   }
 
+  &--column-center-tablet {
+    @include query(tablet) {
+      flex-direction: column;
+      @include vender(align-items, center);
+      justify-content: center;
+    }
+  }
+
+  &--column-center-phone {
+    @include query(phone) {
+      flex-direction: column;
+      @include vender(align-items, center);
+      justify-content: center;
+    }
+  }
+
   &--column-left {
     flex-direction: column;
-    align-items: flex-start;
+    @include vender(align-items, flex-start);
     justify-content: center;
+  }
+
+  &--column-left-tablet {
+    @include query(tablet) {
+      flex-direction: column;
+      @include vender(align-items, flex-start);
+      justify-content: center;
+    }
+  }
+
+  &--column-left-phone {
+    @include query(phone) {
+      flex-direction: column;
+      @include vender(align-items, flex-start);
+      justify-content: center;
+    }
   }
 
   &--column-right {
     flex-direction: column;
-    align-items: flex-end;
+    @include vender(align-items, flex-end);
     justify-content: center;
+  }
+
+  &--column-right-tablet {
+    @include query(tablet) {
+      flex-direction: column;
+      @include vender(align-items, flex-end);
+      justify-content: center;
+    }
+  }
+
+  &--column-right-phone {
+    @include query(phone) {
+      flex-direction: column;
+      @include vender(align-items, flex-end);
+      justify-content: center;
+    }
   }
 
   &--space-between {

@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div class="grid grid--center">
+<div class="grid grid--center f-color--red-500">
   <div class="3/5 1/2--tablet grid__cell grid__cell--order-2 flex flex--row-righ-phone">
 		<div>3</div>
 		<div>3</div>

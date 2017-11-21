@@ -5,13 +5,13 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-@import "~material-design-lite/src/material-design-lite.scss";
 @import "~material-design-lite/src/_color-definitions.scss";
 @import "~hiraku/scss/hiraku";
 // @import "~slick-carousel/slick/slick.scss";
 // @import "~slick-carousel/slick/slick-theme.scss";
 
 // variables setting
+@import "variables/common-config";
 @import "variables/color-config";
 @import "variables/font-config";
 @import "variables/grid-config";
