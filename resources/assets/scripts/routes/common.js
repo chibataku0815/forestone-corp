@@ -10,7 +10,6 @@ export default {
     $(".js-offcanvas").hiraku({
       btn: ".js-offcanvas-btn",
       direction: "right",
-      breakpoint: 900,
     });
 
     // toogle

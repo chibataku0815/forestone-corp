@@ -9,7 +9,11 @@
 body,
 html {
   margin: 0;
-  line-height: 1.8;
+  line-height: 2.8;
+  letter-spacing: 2px;
+  @include query(tablet) {
+    letter-spacing: 1vw;
+  }
   color: #333;
   font-size: 15px;
   font-family: $font__primary;

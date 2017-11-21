@@ -8,47 +8,58 @@
  */
 
 ?>
+<div class="grid">
+	<article class="1/2 grid__cell">
+		<section>
+			<h3 class="title">About</h3>
+			<p>
+				私たちForesonteは、幅広いスキルで、UI・UXデザイン、ブランディング、マーケティング、コピーライティング、プリント＆パッケージング・デザインなどのフロントエンド/バックエンド開発を含め、様々な事業の成長を創造しています。
+			</p>
+		</section>
+	</article>
+</div>
+<div class="grid">
+	<article class="grid__cell">
+		<h3 class="title">New Topcis</h3>
+		<header class="entry-header">
+			<?php
+			if ( is_singular() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+			if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php the_date("Y.n.j"); ?>
+			</div><!-- .entry-meta -->
+			<?php
+			endif; ?>
+		</header><!-- .entry-header -->
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php infofores_tone_co_jp_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+		<div class="entry-content">
+			<?php
+				the_content( sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'infofores-tone-co-jp' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				) );
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'infofores-tone-co-jp' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'infofores-tone-co-jp' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'infofores-tone-co-jp' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php infofores_tone_co_jp_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+		<footer class="entry-footer">
+		</footer><!-- .entry-footer -->
+	</article><!-- #post-<?php the_ID(); ?> -->
+</div>

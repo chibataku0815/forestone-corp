@@ -21,15 +21,32 @@
   }
 }
 
-.js-hiraku-offcanvas-btn {
-  background: unquote("rgba(#{$color-primary-dark}, 1)");
-  border-radius: 2px;
-
-  &:hover {
-    background: unquote("rgba(#{$palette-grey-800}, 1)");
+.hiraku-open-btn-line {
+  &::before,
+  &::after {
+    background: unquote("rgba(#{$color-black}, 1)");
   }
+}
 
-  &:focus {
-    background: unquote("rgba(#{$color-primary-dark}, 1)");
+.js-hiraku-offcanvas-btn {
+  background: none;
+  border: none;
+  @include vender(display, flex);
+  @include vender(align-items, center);
+  justify-content: center;
+  cursor: pointer;
+}
+
+.js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar {
+  width: $side-menu-width;
+  @include query(lap-and-up) {
+    width: $side-menu-width / 2;
+  }
+}
+
+.js-hiraku-offcanvas-body-right {
+  left: (- $side-menu-width);
+  @include query(lap-and-up) {
+    left: (- $side-menu-width) / 2;
   }
 }

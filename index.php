@@ -13,23 +13,7 @@
  */
 
 get_header(); ?>
-
-<div class="grid grid--center f-color--red-500">
-  <div class="3/5 1/2--tablet grid__cell grid__cell--order-2 flex flex--row-righ-phone">
-		<div>3</div>
-		<div>3</div>
-		<div>3</div>
-	</div>
-  <div class="1/5 1/2--tablet grid__cell grid__cell--order-1 flex flex--row-left">
-  	<div>1</div>
-		<div>1</div>
-		<div>1</div>
-  </div>
-</div>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
+		<main id="main" class="">
 		<?php
 		if ( have_posts() ) :
 
@@ -52,9 +36,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_sidebar();

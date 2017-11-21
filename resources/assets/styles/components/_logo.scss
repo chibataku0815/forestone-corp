@@ -1,4 +1,7 @@
 .logo {
+  height: 100px;
+  font-size: 22px;
+  letter-spacing: 5px;
   @include vender(display, flex);
   justify-content: center;
   align-items: center;
@@ -8,6 +11,6 @@
   }
 
   &__image {
-    max-width: 150px;
+    max-width: 30px;
   }
 }

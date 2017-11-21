@@ -125,16 +125,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: -($av-gutter);
 }
 
 .#{avCreateElementClassName()} {
-  @include vender(display, flex);
   width: 100%;
   padding: 0;
-  padding-left: $av-gutter;
+  padding: $av-gutter;
   margin: 0;
-  vertical-align: top;
 }
 @if $av-enable-grid-center {
   .#{avCreateBlockClassName('center')} {
@@ -267,20 +264,22 @@
 }
 
 // desktop hide
-.#{$av-namespace}__cell--hide {
-  display: none !important;
+.cell--hide {
+  @include query(lap-and-up) {
+    display: none !important;
+  }
 }
 
 // tablet hide
-@include query(tablet) {
-  .gird__cell--hide-tablet {
+.cell--hide-tablet {
+  @include query(tablet) {
     display: none !important;
   }
 }
 
 // phone hider
-@include query(phone) {
-  .#{$av-namespace}__cell--hide-phone {
+.cell--hide-phone {
+  @include query(phone) {
     display: none !important;
   }
 }
