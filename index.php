@@ -14,6 +14,9 @@
 
 get_header(); ?>
 		<main id="main" class="">
+		<div class="flex flex--center">
+			<h2 id="topics" class="">New Topcis</h3>
+		</div>
 		<?php
 		if ( have_posts() ) :
 

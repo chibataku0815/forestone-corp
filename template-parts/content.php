@@ -9,7 +9,6 @@
 
 ?>
 <div class="wrapper flex flex--column-center flex--space-around">
-<h2 id="topics" class="">New Topcis</h3>
 <div class="grid flex flex--center">
 	<article class="7-10 1-1--tablet 1-1--phone grid__cell">
 		<header class="entry-header">
