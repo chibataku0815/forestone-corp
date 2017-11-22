@@ -11,6 +11,7 @@
 
   @include query(tablet) {
     padding: 10px;
+    line-height: 1;
   }
 
   &__image {

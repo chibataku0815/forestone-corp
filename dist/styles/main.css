@@ -6230,6 +6230,7 @@ label {
 @media screen and (max-width: 800px) {
   .logo {
     padding: 10px;
+    line-height: 1;
   }
 }
 
