@@ -14,11 +14,8 @@
 		  <button data-remodal-action="close" class="remodal-close"></button>
 		  <h1>Remodal</h1>
 		  <p>
-		    Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+		    <?php echo do_shortcode( '[contact-form-7 id="16" title="お問合せ"]' ); ?>
 		  </p>
-		  <br>
-		  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-		  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
 		</div>
 		<div class="copyright">
 			Copyright © Forestone Inc All Rights Reserved.

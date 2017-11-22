@@ -26,7 +26,7 @@
 	<header class="">
 		<div class="grid flex flex--space-between">
 		  <div class="logo 11-12 3-4--tablet grid__cell">
-		  	Forestone inc.
+		  	<a href="/">Forestone inc.</a>
 		  </div>
 
 			<?php get_template_part( 'template-parts/navigation', get_post_format() ); ?>
