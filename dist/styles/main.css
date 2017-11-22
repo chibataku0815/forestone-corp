@@ -6876,7 +6876,7 @@ label {
 }
 
 .wpcf7 .required {
-  color: #f00;
+  color: rgba(229,115,115, .8);
 }
 
 .wpcf7 .wpcf7-validation-errors {
