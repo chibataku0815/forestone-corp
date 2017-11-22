@@ -137,6 +137,7 @@ option {
 
 input {
   padding: 5px;
+  font-size: 16px;
   border: 1px solid unquote("rgba(#{$color-black}, .2)");
   line-height: 2;
   @include vender(appearance, none);
@@ -218,6 +219,7 @@ textarea {
   width: 100%;
   min-height: 20vh;
   padding: 10px;
+  font-size: 16px;
   background: unquote("rgba(#{$color-primary-light}, .1)");
   border: none;
 
