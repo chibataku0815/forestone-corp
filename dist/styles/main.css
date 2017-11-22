@@ -6080,6 +6080,24 @@ label {
   position: fixed;
   right: 0;
   bottom: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+    position: static;
+    background: rgba(0,0,0, 1);
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    -js-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .copyright {
@@ -6088,8 +6106,21 @@ label {
   -js-transform: rotate(90deg);
   transform: rotate(90deg);
   position: fixed;
-  left: -200px;
-  bottom: 190px;
+  left: -35vh;
+  top: 50vh;
+  font-size: 3vh;
+}
+
+@media screen and (max-width: 800px) {
+  .copyright {
+    padding: 10px;
+    font-size: 11px;
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -js-transform: rotate(0deg);
+    transform: rotate(0deg);
+    position: static;
+  }
 }
 
 .faq {

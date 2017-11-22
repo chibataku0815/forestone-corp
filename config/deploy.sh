@@ -52,6 +52,8 @@ ssh -A -o StrictHostKeyChecking=no ${host} "
         git reset --hard origin/master
         echo 'reset --hard OK'
         git pull origin master
+        echo 'git pull OK'
+        yarn
         echo 'deployment success!'
     fi
 "
