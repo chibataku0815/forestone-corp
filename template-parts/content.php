@@ -8,15 +8,10 @@
  */
 
 ?>
+<div class="wrapper flex flex--column-center flex--space-around">
+<h2 id="topics" class="">New Topcis・・・・・・・・・・</h3>
 <div class="grid flex flex--center">
 	<article class="7-10 1-1--tablet 1-1--phone grid__cell">
-		<section>
-			<p class="text-box">
-				私たちForesonteは、幅広いスキルで、UI・UXデザイン、ブランディング、マーケティング、コピーライティング、プリント＆パッケージング・デザインなどのフロントエンド/バックエンド開発を含め、様々な事業の成長を創造しています。
-			</p>
-		</section>
-
-		<h3 class="title">New Topcis</h3>
 		<header class="entry-header">
 			<?php
 			if ( is_singular() ) :
@@ -53,9 +48,13 @@
 					'after'  => '</div>',
 				) );
 			?>
-		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
-		</footer><!-- .entry-footer -->
+		</div><!-- .entry-content -->
 	</article><!-- #post-<?php the_ID(); ?> -->
+</div>
+<div class="flex flex--center">
+	<a href="#page" class="flex flex--column-center">
+		<i class="icon material-icons">keyboard_arrow_up</i>
+	</a>
+</div>
 </div>

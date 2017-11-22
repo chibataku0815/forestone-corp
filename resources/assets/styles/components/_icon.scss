@@ -1,4 +1,6 @@
 .icon {
+  font-size: 45px;
+
   &--navi {
     @include vender(display, flex);
     flex-direction: column;

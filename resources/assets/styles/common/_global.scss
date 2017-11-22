@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: unquote("rgba(#{$color-primary-dark}, 1)");
+    color: unquote("rgba(#{$palette-grey-500}, 1)");
     text-decoration: none;
   }
 }
@@ -145,10 +145,10 @@ option {
 }
 
 input {
-  padding: 10 5px;
+  padding: 5px;
   border: 1px solid unquote("rgba(#{$color-black}, .2)");
-  @include vender(border-radius, 4px);
   font-size: 14px;
+  line-height: 2;
   @include vender(appearance, none);
 }
 
@@ -199,32 +199,42 @@ input {
 [type='tel'],
 [type='text'] {
   width: 100%;
+  padding: 7px;
+  background: unquote("rgba(#{$color-primary-light}, .1)");
+  border: none;
+
+  &:placeholder-shown {
+    color: unquote("rgba(#{$color-primary-light}, .5)");
+  }
 }
 
 [type='image'] {
-  border: none;
-  padding: 0;
   max-width: 100%;
+  padding: 0;
+  border: none;
 }
 
 [type='submit'] {
   width: 100%;
-  font-size: 21px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 2;
   font-weight: bold;
   color: unquote("rgba(#{$color-white}, 1)");
-  background-color: unquote("rgba(#{$color-accent}, 1)");
-  @include vender(border-radius, 8px);
+  background-color: unquote("rgba(#{$color-primary}, 1)");
   cursor: pointer;
-  border: 1px solid unquote("rgba(#{$color-accent}, 1)");
-  @include vender(box-shadow, 0 9px 0 unquote("rgba(#{$color-accent-dark}, 1)"));
 }
 
 textarea {
   width: 100%;
-  min-height: 200;
-  padding: 10;
-  font-size: 16px;
+  min-height: 20vh;
+  padding: 10px;
+  background: unquote("rgba(#{$color-primary-light}, .1)");
+  border: none;
+  font-size: 14px;
+
+  &:placeholder-shown {
+    color: unquote("rgba(#{$color-primary-light}, .5)");
+  }
 }
 
 label {

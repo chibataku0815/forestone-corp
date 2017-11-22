@@ -9,10 +9,11 @@
 ?>
 
 	<footer id="" class="grid">
-		<a class="contact" data-remodal-target="modal">contact</a>
+		<a class="contact" data-remodal-target="modal">
+			<div class="contact__text">contact</div>
+		</a>
 		<div class="remodal" data-remodal-id="modal">
 		  <button data-remodal-action="close" class="remodal-close"></button>
-		  <h1>Remodal</h1>
 		  <p>
 		    <?php echo do_shortcode( '[contact-form-7 id="16" title="お問合せ"]' ); ?>
 		  </p>

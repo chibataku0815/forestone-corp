@@ -144,17 +144,12 @@
     justify-content: space-between;
   }
 
+  &--space-around {
+    justify-content: space-around;
+  }
+
   &--vertical-center {
     @include vender(align-items, center);
-  }
-
-  &--side-left {
-    flex-flow: wrap;
-    justify-content: flex-end;
-  }
-
-  &--side-center {
-    justify-content: center;
   }
 
   &--no-wrap-phone {
