@@ -25,7 +25,7 @@
 
   @if $style == 'fraction' or $style == 'fragment' {
     // Set delimiter as slash or text
-    $delimiter: if($style == 'fraction', \/, -of-);
+    $delimiter: if($style == 'fraction', \-, -of-);
     $class-name: #{$av-width-class-namespace}#{escape-numerator($numerator, $av-width-class-namespace)}#{$delimiter}#{$denominator}#{$breakpoint-alias};
   }
 
@@ -125,16 +125,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: -($av-gutter);
 }
 
 .#{avCreateElementClassName()} {
-  @include vender(display, flex);
   width: 100%;
   padding: 0;
-  padding-left: $av-gutter;
+  padding: $av-gutter;
   margin: 0;
-  vertical-align: top;
 }
 @if $av-enable-grid-center {
   .#{avCreateBlockClassName('center')} {
@@ -241,8 +238,8 @@
   }
 }
 
-// Define order override classes.
-@for $i from 1 through $grid-max-columns {
+// desktop order
+@for $i from 1 through 12 {
   .grid__cell--order-#{$i} {
     order: $i;
   }
@@ -250,19 +247,40 @@
 
 // tablet order
 @include query(tablet) {
-  @for $i from 1 through $grid-max-columns {
+  @for $i from 1 through 12 {
     .grid__cell--order-#{$i}-tablet.cell--order-#{$i}-tablet {
       order: $i;
     }
   }
 }
 
-// tablet order
+// phone order
 @include query(phone) {
-  @for $i from 1 through $grid-max-columns {
+  @for $i from 1 through 12 {
     .grid__cell--order-#{$i}-phone.cell--order-#{$i}-pnone {
       order: $i;
     }
+  }
+}
+
+// desktop hide
+.cell--hide {
+  @include query(lap-and-up) {
+    display: none !important;
+  }
+}
+
+// tablet hide
+.cell--hide-tablet {
+  @include query(tablet) {
+    display: none !important;
+  }
+}
+
+// phone hider
+.cell--hide-phone {
+  @include query(phone) {
+    display: none !important;
   }
 }
 

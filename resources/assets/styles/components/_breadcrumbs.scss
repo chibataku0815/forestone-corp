@@ -5,7 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @media (max-width: $grid-desktop-breakpoint - 1) {
+  @include query(desktop) {
     display: -webkit-box;
     margin: 0;
   }

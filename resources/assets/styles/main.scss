@@ -5,13 +5,15 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-@import "~material-design-lite/src/material-design-lite.scss";
 @import "~material-design-lite/src/_color-definitions.scss";
 @import "~hiraku/scss/hiraku";
+@import "~remodal/dist/remodal-default-theme";
+@import "~remodal/dist/remodal";
 // @import "~slick-carousel/slick/slick.scss";
 // @import "~slick-carousel/slick/slick-theme.scss";
 
 // variables setting
+@import "variables/common-config";
 @import "variables/color-config";
 @import "variables/font-config";
 @import "variables/grid-config";
@@ -33,6 +35,8 @@
 @import "components/buttons";
 @import "components/card";
 @import "components/chip";
+@import "components/contact";
+@import "components/copyright";
 @import "components/comments";
 @import "components/faq";
 @import "components/forms";
@@ -44,10 +48,12 @@
 @import "components/privacy";
 @import "components/scroll-x";
 @import "components/tel";
+@import "components/text-box";
 @import "components/text";
 @import "components/title";
 
 /** js */
+@import "js/hiraku";
 @import "js/hiraku";
 @import "js/toggle";
 @import "js/slick";
