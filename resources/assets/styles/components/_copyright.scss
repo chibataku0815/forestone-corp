@@ -1,0 +1,6 @@
+.copyright {
+  @include vender(transform, rotate(90deg));
+  position: fixed;
+  left: -200px;
+  bottom: 190px;
+}

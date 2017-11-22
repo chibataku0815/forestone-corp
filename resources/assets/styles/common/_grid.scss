@@ -25,7 +25,7 @@
 
   @if $style == 'fraction' or $style == 'fragment' {
     // Set delimiter as slash or text
-    $delimiter: if($style == 'fraction', \/, -of-);
+    $delimiter: if($style == 'fraction', \-, -of-);
     $class-name: #{$av-width-class-namespace}#{escape-numerator($numerator, $av-width-class-namespace)}#{$delimiter}#{$denominator}#{$breakpoint-alias};
   }
 

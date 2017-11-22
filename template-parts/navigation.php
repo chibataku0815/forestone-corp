@@ -1,10 +1,16 @@
 
-<button type="button" class="1/12 1/4--tablet grid__cell js-offcanvas-btn" >
+<button type="button" class="1-12 1-4--tablet grid__cell js-offcanvas-btn f-color--black" >
   <span class="hiraku-open-btn-line"></span>
 </button>
 
 <div class="js-hiraku js-offcanvas">
-  <a href="https://kaigojob-partner.com/forms/kjp_004/p01" rel="nofollow" class="js-hiraku__list">
-    ご登録・お問合せはこちら<i class="material-icons">filter_none</i>
+  <a href="" rel="nofollow" class="js-hiraku__list">
+    About
+  </a>
+  <a href="" rel="nofollow" class="js-hiraku__list">
+    company
+  </a>
+  <a href="" rel="nofollow" class="js-hiraku__list">
+    blog
   </a>
 </div>

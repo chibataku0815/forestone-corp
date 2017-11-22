@@ -1,6 +1,6 @@
 import 'hiraku';
 import 'slick-carousel';
-import 'jquery.hoverformenu';
+import 'remodal';
 
 export default {
   init() {
@@ -16,22 +16,6 @@ export default {
     $(".js-toggle").click(function () {
       $(this).next(".js-toggle__content").toggle("fast");
     });
-
-    // jquery.hoverformenu
-    $(".js-dropdown").hoverForMenu({
-    onMouseEnter: {
-      t: 300,
-      fn: function () {
-        $(".js-dropdown__parent", this).addClass("js-dropdown__parent--visible");
-      },
-    },
-    onMouseLeave: {
-      t: 300,
-      fn: function () {
-        $(".js-dropdown__parent", this).removeClass("js-dropdown__parent--visible");
-      },
-    },
-  });
 
 
   // slick-carousel

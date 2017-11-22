@@ -24,7 +24,11 @@
 .hiraku-open-btn-line {
   &::before,
   &::after {
-    background: unquote("rgba(#{$color-black}, 1)");
+    background: unquote("rgba(#{$color-white}, 1)");
+  }
+
+  &::after {
+    width: 25px;
   }
 }
 

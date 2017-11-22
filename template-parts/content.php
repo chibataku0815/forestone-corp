@@ -8,18 +8,14 @@
  */
 
 ?>
-<div class="grid">
-	<article class="9/10 grid__cell">
+<div class="grid flex flex--center">
+	<article class="7-10 1-1--tablet 1-1--phone grid__cell">
 		<section>
-			<h3 class="title">About</h3>
 			<p class="text-box">
 				私たちForesonteは、幅広いスキルで、UI・UXデザイン、ブランディング、マーケティング、コピーライティング、プリント＆パッケージング・デザインなどのフロントエンド/バックエンド開発を含め、様々な事業の成長を創造しています。
 			</p>
 		</section>
-	</article>
-</div>
-<div class="grid">
-	<article class="grid__cell">
+
 		<h3 class="title">New Topcis</h3>
 		<header class="entry-header">
 			<?php

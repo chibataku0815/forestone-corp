@@ -23,14 +23,13 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="">
-	<header class="grid__cell 11/12">
+	<header class="">
 		<div class="grid flex flex--space-between">
-		  <div class="logo 11/12 3/4--tablet grid__cell">
-		  	Forestone
+		  <div class="logo 11-12 3-4--tablet grid__cell">
+		  	Forestone inc.
 		  </div>
 
 			<?php get_template_part( 'template-parts/navigation', get_post_format() ); ?>
 		</div>
 
 	</header><!-- #masthead -->
-	<div id="content" class="site-content">

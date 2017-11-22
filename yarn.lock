@@ -3383,7 +3383,7 @@ jquery.hoverformenu@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/jquery.hoverformenu/-/jquery.hoverformenu-1.0.0.tgz#3e1826a032a30afe564766bce9fd6780816a951f"
 
-"jquery@1.12.4 - 3", jquery@>=1.8:
+jquery@*, "jquery@1.12.4 - 3", jquery@>=1.8:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -5270,6 +5270,12 @@ regjsparser@^0.1.4:
   resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.1.5.tgz#7ee8f84dc6fa792d3fd0ae228d24bd949ead205c"
   dependencies:
     jsesc "~0.5.0"
+
+remodal@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/remodal/-/remodal-1.1.1.tgz#00f580b09417b2b7e7a425b17327ec10f3d596c3"
+  dependencies:
+    jquery "*"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"

@@ -53,9 +53,9 @@
 .js-hiraku-offcanvas-body {
   width: 100%;
   left: 0;
-  -webkit-transition: left 0.1s ease-in-out;
-  -o-transition: left 0.1s ease-in-out;
-  transition: left 0.1s ease-in-out;
+  -webkit-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
   z-index: 0;
 }
 
@@ -99,38 +99,38 @@
   right: 0;
   left: auto;
   margin-right: -70%;
-  -webkit-transition: margin-right 0.1s ease-in-out;
-  -o-transition: margin-right 0.1s ease-in-out;
-  transition: margin-right 0.1s ease-in-out;
+  -webkit-transition: margin-right 0.3s ease-in-out;
+  -o-transition: margin-right 0.3s ease-in-out;
+  transition: margin-right 0.3s ease-in-out;
 }
 
 .js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar-left {
   left: 0;
   right: auto;
   margin-left: -70%;
-  -webkit-transition: margin-left 0.1s ease-in-out;
-  -o-transition: margin-left 0.1s ease-in-out;
-  transition: margin-left 0.1s ease-in-out;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
 }
 
 .js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar-right.active {
   margin-right: 0;
-  -webkit-transition: margin-right 0.1s ease-in-out;
-  -o-transition: margin-right 0.1s ease-in-out;
-  transition: margin-right 0.1s ease-in-out;
+  -webkit-transition: margin-right 0.3s ease-in-out;
+  -o-transition: margin-right 0.3s ease-in-out;
+  transition: margin-right 0.3s ease-in-out;
 }
 
 .js-hiraku-offcanvas-active .js-hiraku-offcanvas-sidebar-left.active {
   margin-left: 0;
-  -webkit-transition: margin-left 0.1s ease-in-out;
-  -o-transition: margin-left 0.1s ease-in-out;
-  transition: margin-left 0.1s ease-in-out;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
 }
 
 .js-hiraku-header-fixed {
-  -webkit-transition: margin-left 0.1s ease-in-out;
-  -o-transition: margin-left 0.1s ease-in-out;
-  transition: margin-left 0.1s ease-in-out;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
   position: fixed;
   top: 0;
   left: 0;
@@ -223,6 +223,468 @@
   -webkit-transform: translate(-2px, -6px) rotate(-45deg);
        -o-transform: translate(-2px, -6px) rotate(-45deg);
           transform: translate(-2px, -6px) rotate(-45deg);
+}
+
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+     animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+  -webkit-animation-name: remodal-overlay-opening-keyframes;
+  -o-animation-name: remodal-overlay-opening-keyframes;
+     animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-name: remodal-overlay-closing-keyframes;
+  -o-animation-name: remodal-overlay-closing-keyframes;
+     animation-name: remodal-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+  padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  color: #2b2e38;
+  background: #fff;
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  -webkit-animation-duration: 0.3s;
+  -o-animation-duration: 0.3s;
+     animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+  -webkit-animation-name: remodal-opening-keyframes;
+  -o-animation-name: remodal-opening-keyframes;
+     animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+  -webkit-animation-name: remodal-closing-keyframes;
+  -o-animation-name: remodal-closing-keyframes;
+     animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+
+.remodal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: visible;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+  color: #2b2e38;
+}
+
+.remodal-close:before {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 25px;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 35px;
+  content: "\D7";
+  text-align: center;
+}
+
+/* Dialog buttons */
+
+.remodal-confirm,
+.remodal-cancel {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+}
+
+.remodal-confirm {
+  color: #fff;
+  background: #81c784;
+}
+
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+  background: #66bb6a;
+}
+
+.remodal-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+  background: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+
+@-webkit-keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@-o-keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+       transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: none;
+    -o-transform: none;
+       transform: none;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+       transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: none;
+    -o-transform: none;
+       transform: none;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@-webkit-keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@-o-keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+       transform: scale(0.95);
+    opacity: 0;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+       transform: scale(0.95);
+    opacity: 0;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@-webkit-keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Media queries
+   ========================================================================== */
+
+@media only screen and (min-width: 641px) {
+  .remodal {
+    max-width: 700px;
+  }
+}
+
+/* IE8
+   ========================================================================== */
+
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .remodal {
+  width: 700px;
+}
+
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+  display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
 }
 
 @font-face {
@@ -395,12 +857,12 @@ p {
 
 main {
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
   margin: 0 auto;
 }
 
 footer {
-  border-top: 5px solid rgba(10,10,10, 1);
+  border-bottom: 5px solid rgba(10,10,10, 1);
 }
 
 ul {
@@ -849,2277 +1311,2277 @@ label {
   }
 }
 
-.\31\/1 {
+.\31-1 {
   width: 100%;
 }
 
-.\31\/2,
-.\32\/4,
-.\33\/6,
-.\34\/8,
-.\35\/10,
-.\36\/12 {
+.\31-2,
+.\32-4,
+.\33-6,
+.\34-8,
+.\35-10,
+.\36-12 {
   width: 50%;
 }
 
-.\31\/3,
-.\32\/6,
-.\33\/9,
-.\34\/12 {
+.\31-3,
+.\32-6,
+.\33-9,
+.\34-12 {
   width: 33.33333%;
 }
 
-.\32\/3,
-.\34\/6,
-.\36\/9,
-.\38\/12 {
+.\32-3,
+.\34-6,
+.\36-9,
+.\38-12 {
   width: 66.66667%;
 }
 
-.\31\/4,
-.\32\/8,
-.\33\/12 {
+.\31-4,
+.\32-8,
+.\33-12 {
   width: 25%;
 }
 
-.\33\/4,
-.\36\/8,
-.\39\/12 {
+.\33-4,
+.\36-8,
+.\39-12 {
   width: 75%;
 }
 
-.\31\/5,
-.\32\/10 {
+.\31-5,
+.\32-10 {
   width: 20%;
 }
 
-.\32\/5,
-.\34\/10 {
+.\32-5,
+.\34-10 {
   width: 40%;
 }
 
-.\33\/5,
-.\36\/10 {
+.\33-5,
+.\36-10 {
   width: 60%;
 }
 
-.\34\/5,
-.\38\/10 {
+.\34-5,
+.\38-10 {
   width: 80%;
 }
 
-.\31\/6,
-.\32\/12 {
+.\31-6,
+.\32-12 {
   width: 16.66667%;
 }
 
-.\35\/6,
-.\3130\/12 {
+.\35-6,
+.\3130-12 {
   width: 83.33333%;
 }
 
-.\31\/7 {
+.\31-7 {
   width: 14.28571%;
 }
 
-.\32\/7 {
+.\32-7 {
   width: 28.57143%;
 }
 
-.\33\/7 {
+.\33-7 {
   width: 42.85714%;
 }
 
-.\34\/7 {
+.\34-7 {
   width: 57.14286%;
 }
 
-.\35\/7 {
+.\35-7 {
   width: 71.42857%;
 }
 
-.\36\/7 {
+.\36-7 {
   width: 85.71429%;
 }
 
-.\31\/8 {
+.\31-8 {
   width: 12.5%;
 }
 
-.\33\/8 {
+.\33-8 {
   width: 37.5%;
 }
 
-.\35\/8 {
+.\35-8 {
   width: 62.5%;
 }
 
-.\37\/8 {
+.\37-8 {
   width: 87.5%;
 }
 
-.\31\/9 {
+.\31-9 {
   width: 11.11111%;
 }
 
-.\32\/9 {
+.\32-9 {
   width: 22.22222%;
 }
 
-.\34\/9 {
+.\34-9 {
   width: 44.44444%;
 }
 
-.\35\/9 {
+.\35-9 {
   width: 55.55556%;
 }
 
-.\37\/9 {
+.\37-9 {
   width: 77.77778%;
 }
 
-.\38\/9 {
+.\38-9 {
   width: 88.88889%;
 }
 
-.\31\/10 {
+.\31-10 {
   width: 10%;
 }
 
-.\33\/10 {
+.\33-10 {
   width: 30%;
 }
 
-.\37\/10 {
+.\37-10 {
   width: 70%;
 }
 
-.\39\/10 {
+.\39-10 {
   width: 90%;
 }
 
-.\31\/11 {
+.\31-11 {
   width: 9.09091%;
 }
 
-.\32\/11 {
+.\32-11 {
   width: 18.18182%;
 }
 
-.\33\/11 {
+.\33-11 {
   width: 27.27273%;
 }
 
-.\34\/11 {
+.\34-11 {
   width: 36.36364%;
 }
 
-.\35\/11 {
+.\35-11 {
   width: 45.45455%;
 }
 
-.\36\/11 {
+.\36-11 {
   width: 54.54545%;
 }
 
-.\37\/11 {
+.\37-11 {
   width: 63.63636%;
 }
 
-.\38\/11 {
+.\38-11 {
   width: 72.72727%;
 }
 
-.\39\/11 {
+.\39-11 {
   width: 81.81818%;
 }
 
-.\3130\/11 {
+.\3130-11 {
   width: 90.90909%;
 }
 
-.\31\/12 {
+.\31-12 {
   width: 8.33333%;
 }
 
-.\35\/12 {
+.\35-12 {
   width: 41.66667%;
 }
 
-.\37\/12 {
+.\37-12 {
   width: 58.33333%;
 }
 
-.\3131\/12 {
+.\3131-12 {
   width: 91.66667%;
 }
 
 @media screen and (max-width: 499px) {
-  .\31\/1--phone {
+  .\31-1--phone {
     width: 100%;
   }
 
-  .\31\/2--phone,
-  .\32\/4--phone,
-  .\33\/6--phone,
-  .\34\/8--phone,
-  .\35\/10--phone,
-  .\36\/12--phone {
+  .\31-2--phone,
+  .\32-4--phone,
+  .\33-6--phone,
+  .\34-8--phone,
+  .\35-10--phone,
+  .\36-12--phone {
     width: 50%;
   }
 
-  .\31\/3--phone,
-  .\32\/6--phone,
-  .\33\/9--phone,
-  .\34\/12--phone {
+  .\31-3--phone,
+  .\32-6--phone,
+  .\33-9--phone,
+  .\34-12--phone {
     width: 33.33333%;
   }
 
-  .\32\/3--phone,
-  .\34\/6--phone,
-  .\36\/9--phone,
-  .\38\/12--phone {
+  .\32-3--phone,
+  .\34-6--phone,
+  .\36-9--phone,
+  .\38-12--phone {
     width: 66.66667%;
   }
 
-  .\31\/4--phone,
-  .\32\/8--phone,
-  .\33\/12--phone {
+  .\31-4--phone,
+  .\32-8--phone,
+  .\33-12--phone {
     width: 25%;
   }
 
-  .\33\/4--phone,
-  .\36\/8--phone,
-  .\39\/12--phone {
+  .\33-4--phone,
+  .\36-8--phone,
+  .\39-12--phone {
     width: 75%;
   }
 
-  .\31\/5--phone,
-  .\32\/10--phone {
+  .\31-5--phone,
+  .\32-10--phone {
     width: 20%;
   }
 
-  .\32\/5--phone,
-  .\34\/10--phone {
+  .\32-5--phone,
+  .\34-10--phone {
     width: 40%;
   }
 
-  .\33\/5--phone,
-  .\36\/10--phone {
+  .\33-5--phone,
+  .\36-10--phone {
     width: 60%;
   }
 
-  .\34\/5--phone,
-  .\38\/10--phone {
+  .\34-5--phone,
+  .\38-10--phone {
     width: 80%;
   }
 
-  .\31\/6--phone,
-  .\32\/12--phone {
+  .\31-6--phone,
+  .\32-12--phone {
     width: 16.66667%;
   }
 
-  .\35\/6--phone,
-  .\3130\/12--phone {
+  .\35-6--phone,
+  .\3130-12--phone {
     width: 83.33333%;
   }
 
-  .\31\/7--phone {
+  .\31-7--phone {
     width: 14.28571%;
   }
 
-  .\32\/7--phone {
+  .\32-7--phone {
     width: 28.57143%;
   }
 
-  .\33\/7--phone {
+  .\33-7--phone {
     width: 42.85714%;
   }
 
-  .\34\/7--phone {
+  .\34-7--phone {
     width: 57.14286%;
   }
 
-  .\35\/7--phone {
+  .\35-7--phone {
     width: 71.42857%;
   }
 
-  .\36\/7--phone {
+  .\36-7--phone {
     width: 85.71429%;
   }
 
-  .\31\/8--phone {
+  .\31-8--phone {
     width: 12.5%;
   }
 
-  .\33\/8--phone {
+  .\33-8--phone {
     width: 37.5%;
   }
 
-  .\35\/8--phone {
+  .\35-8--phone {
     width: 62.5%;
   }
 
-  .\37\/8--phone {
+  .\37-8--phone {
     width: 87.5%;
   }
 
-  .\31\/9--phone {
+  .\31-9--phone {
     width: 11.11111%;
   }
 
-  .\32\/9--phone {
+  .\32-9--phone {
     width: 22.22222%;
   }
 
-  .\34\/9--phone {
+  .\34-9--phone {
     width: 44.44444%;
   }
 
-  .\35\/9--phone {
+  .\35-9--phone {
     width: 55.55556%;
   }
 
-  .\37\/9--phone {
+  .\37-9--phone {
     width: 77.77778%;
   }
 
-  .\38\/9--phone {
+  .\38-9--phone {
     width: 88.88889%;
   }
 
-  .\31\/10--phone {
+  .\31-10--phone {
     width: 10%;
   }
 
-  .\33\/10--phone {
+  .\33-10--phone {
     width: 30%;
   }
 
-  .\37\/10--phone {
+  .\37-10--phone {
     width: 70%;
   }
 
-  .\39\/10--phone {
+  .\39-10--phone {
     width: 90%;
   }
 
-  .\31\/11--phone {
+  .\31-11--phone {
     width: 9.09091%;
   }
 
-  .\32\/11--phone {
+  .\32-11--phone {
     width: 18.18182%;
   }
 
-  .\33\/11--phone {
+  .\33-11--phone {
     width: 27.27273%;
   }
 
-  .\34\/11--phone {
+  .\34-11--phone {
     width: 36.36364%;
   }
 
-  .\35\/11--phone {
+  .\35-11--phone {
     width: 45.45455%;
   }
 
-  .\36\/11--phone {
+  .\36-11--phone {
     width: 54.54545%;
   }
 
-  .\37\/11--phone {
+  .\37-11--phone {
     width: 63.63636%;
   }
 
-  .\38\/11--phone {
+  .\38-11--phone {
     width: 72.72727%;
   }
 
-  .\39\/11--phone {
+  .\39-11--phone {
     width: 81.81818%;
   }
 
-  .\3130\/11--phone {
+  .\3130-11--phone {
     width: 90.90909%;
   }
 
-  .\31\/12--phone {
+  .\31-12--phone {
     width: 8.33333%;
   }
 
-  .\35\/12--phone {
+  .\35-12--phone {
     width: 41.66667%;
   }
 
-  .\37\/12--phone {
+  .\37-12--phone {
     width: 58.33333%;
   }
 
-  .\3131\/12--phone {
+  .\3131-12--phone {
     width: 91.66667%;
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
-  .\31\/1--handheld {
+  .\31-1--handheld {
     width: 100%;
   }
 
-  .\31\/2--handheld,
-  .\32\/4--handheld,
-  .\33\/6--handheld,
-  .\34\/8--handheld,
-  .\35\/10--handheld,
-  .\36\/12--handheld {
+  .\31-2--handheld,
+  .\32-4--handheld,
+  .\33-6--handheld,
+  .\34-8--handheld,
+  .\35-10--handheld,
+  .\36-12--handheld {
     width: 50%;
   }
 
-  .\31\/3--handheld,
-  .\32\/6--handheld,
-  .\33\/9--handheld,
-  .\34\/12--handheld {
+  .\31-3--handheld,
+  .\32-6--handheld,
+  .\33-9--handheld,
+  .\34-12--handheld {
     width: 33.33333%;
   }
 
-  .\32\/3--handheld,
-  .\34\/6--handheld,
-  .\36\/9--handheld,
-  .\38\/12--handheld {
+  .\32-3--handheld,
+  .\34-6--handheld,
+  .\36-9--handheld,
+  .\38-12--handheld {
     width: 66.66667%;
   }
 
-  .\31\/4--handheld,
-  .\32\/8--handheld,
-  .\33\/12--handheld {
+  .\31-4--handheld,
+  .\32-8--handheld,
+  .\33-12--handheld {
     width: 25%;
   }
 
-  .\33\/4--handheld,
-  .\36\/8--handheld,
-  .\39\/12--handheld {
+  .\33-4--handheld,
+  .\36-8--handheld,
+  .\39-12--handheld {
     width: 75%;
   }
 
-  .\31\/5--handheld,
-  .\32\/10--handheld {
+  .\31-5--handheld,
+  .\32-10--handheld {
     width: 20%;
   }
 
-  .\32\/5--handheld,
-  .\34\/10--handheld {
+  .\32-5--handheld,
+  .\34-10--handheld {
     width: 40%;
   }
 
-  .\33\/5--handheld,
-  .\36\/10--handheld {
+  .\33-5--handheld,
+  .\36-10--handheld {
     width: 60%;
   }
 
-  .\34\/5--handheld,
-  .\38\/10--handheld {
+  .\34-5--handheld,
+  .\38-10--handheld {
     width: 80%;
   }
 
-  .\31\/6--handheld,
-  .\32\/12--handheld {
+  .\31-6--handheld,
+  .\32-12--handheld {
     width: 16.66667%;
   }
 
-  .\35\/6--handheld,
-  .\3130\/12--handheld {
+  .\35-6--handheld,
+  .\3130-12--handheld {
     width: 83.33333%;
   }
 
-  .\31\/7--handheld {
+  .\31-7--handheld {
     width: 14.28571%;
   }
 
-  .\32\/7--handheld {
+  .\32-7--handheld {
     width: 28.57143%;
   }
 
-  .\33\/7--handheld {
+  .\33-7--handheld {
     width: 42.85714%;
   }
 
-  .\34\/7--handheld {
+  .\34-7--handheld {
     width: 57.14286%;
   }
 
-  .\35\/7--handheld {
+  .\35-7--handheld {
     width: 71.42857%;
   }
 
-  .\36\/7--handheld {
+  .\36-7--handheld {
     width: 85.71429%;
   }
 
-  .\31\/8--handheld {
+  .\31-8--handheld {
     width: 12.5%;
   }
 
-  .\33\/8--handheld {
+  .\33-8--handheld {
     width: 37.5%;
   }
 
-  .\35\/8--handheld {
+  .\35-8--handheld {
     width: 62.5%;
   }
 
-  .\37\/8--handheld {
+  .\37-8--handheld {
     width: 87.5%;
   }
 
-  .\31\/9--handheld {
+  .\31-9--handheld {
     width: 11.11111%;
   }
 
-  .\32\/9--handheld {
+  .\32-9--handheld {
     width: 22.22222%;
   }
 
-  .\34\/9--handheld {
+  .\34-9--handheld {
     width: 44.44444%;
   }
 
-  .\35\/9--handheld {
+  .\35-9--handheld {
     width: 55.55556%;
   }
 
-  .\37\/9--handheld {
+  .\37-9--handheld {
     width: 77.77778%;
   }
 
-  .\38\/9--handheld {
+  .\38-9--handheld {
     width: 88.88889%;
   }
 
-  .\31\/10--handheld {
+  .\31-10--handheld {
     width: 10%;
   }
 
-  .\33\/10--handheld {
+  .\33-10--handheld {
     width: 30%;
   }
 
-  .\37\/10--handheld {
+  .\37-10--handheld {
     width: 70%;
   }
 
-  .\39\/10--handheld {
+  .\39-10--handheld {
     width: 90%;
   }
 
-  .\31\/11--handheld {
+  .\31-11--handheld {
     width: 9.09091%;
   }
 
-  .\32\/11--handheld {
+  .\32-11--handheld {
     width: 18.18182%;
   }
 
-  .\33\/11--handheld {
+  .\33-11--handheld {
     width: 27.27273%;
   }
 
-  .\34\/11--handheld {
+  .\34-11--handheld {
     width: 36.36364%;
   }
 
-  .\35\/11--handheld {
+  .\35-11--handheld {
     width: 45.45455%;
   }
 
-  .\36\/11--handheld {
+  .\36-11--handheld {
     width: 54.54545%;
   }
 
-  .\37\/11--handheld {
+  .\37-11--handheld {
     width: 63.63636%;
   }
 
-  .\38\/11--handheld {
+  .\38-11--handheld {
     width: 72.72727%;
   }
 
-  .\39\/11--handheld {
+  .\39-11--handheld {
     width: 81.81818%;
   }
 
-  .\3130\/11--handheld {
+  .\3130-11--handheld {
     width: 90.90909%;
   }
 
-  .\31\/12--handheld {
+  .\31-12--handheld {
     width: 8.33333%;
   }
 
-  .\35\/12--handheld {
+  .\35-12--handheld {
     width: 41.66667%;
   }
 
-  .\37\/12--handheld {
+  .\37-12--handheld {
     width: 58.33333%;
   }
 
-  .\3131\/12--handheld {
+  .\3131-12--handheld {
     width: 91.66667%;
   }
 }
 
 @media screen and (min-width: 500px) {
-  .\31\/1--handheld-and-up {
+  .\31-1--handheld-and-up {
     width: 100%;
   }
 
-  .\31\/2--handheld-and-up,
-  .\32\/4--handheld-and-up,
-  .\33\/6--handheld-and-up,
-  .\34\/8--handheld-and-up,
-  .\35\/10--handheld-and-up,
-  .\36\/12--handheld-and-up {
+  .\31-2--handheld-and-up,
+  .\32-4--handheld-and-up,
+  .\33-6--handheld-and-up,
+  .\34-8--handheld-and-up,
+  .\35-10--handheld-and-up,
+  .\36-12--handheld-and-up {
     width: 50%;
   }
 
-  .\31\/3--handheld-and-up,
-  .\32\/6--handheld-and-up,
-  .\33\/9--handheld-and-up,
-  .\34\/12--handheld-and-up {
+  .\31-3--handheld-and-up,
+  .\32-6--handheld-and-up,
+  .\33-9--handheld-and-up,
+  .\34-12--handheld-and-up {
     width: 33.33333%;
   }
 
-  .\32\/3--handheld-and-up,
-  .\34\/6--handheld-and-up,
-  .\36\/9--handheld-and-up,
-  .\38\/12--handheld-and-up {
+  .\32-3--handheld-and-up,
+  .\34-6--handheld-and-up,
+  .\36-9--handheld-and-up,
+  .\38-12--handheld-and-up {
     width: 66.66667%;
   }
 
-  .\31\/4--handheld-and-up,
-  .\32\/8--handheld-and-up,
-  .\33\/12--handheld-and-up {
+  .\31-4--handheld-and-up,
+  .\32-8--handheld-and-up,
+  .\33-12--handheld-and-up {
     width: 25%;
   }
 
-  .\33\/4--handheld-and-up,
-  .\36\/8--handheld-and-up,
-  .\39\/12--handheld-and-up {
+  .\33-4--handheld-and-up,
+  .\36-8--handheld-and-up,
+  .\39-12--handheld-and-up {
     width: 75%;
   }
 
-  .\31\/5--handheld-and-up,
-  .\32\/10--handheld-and-up {
+  .\31-5--handheld-and-up,
+  .\32-10--handheld-and-up {
     width: 20%;
   }
 
-  .\32\/5--handheld-and-up,
-  .\34\/10--handheld-and-up {
+  .\32-5--handheld-and-up,
+  .\34-10--handheld-and-up {
     width: 40%;
   }
 
-  .\33\/5--handheld-and-up,
-  .\36\/10--handheld-and-up {
+  .\33-5--handheld-and-up,
+  .\36-10--handheld-and-up {
     width: 60%;
   }
 
-  .\34\/5--handheld-and-up,
-  .\38\/10--handheld-and-up {
+  .\34-5--handheld-and-up,
+  .\38-10--handheld-and-up {
     width: 80%;
   }
 
-  .\31\/6--handheld-and-up,
-  .\32\/12--handheld-and-up {
+  .\31-6--handheld-and-up,
+  .\32-12--handheld-and-up {
     width: 16.66667%;
   }
 
-  .\35\/6--handheld-and-up,
-  .\3130\/12--handheld-and-up {
+  .\35-6--handheld-and-up,
+  .\3130-12--handheld-and-up {
     width: 83.33333%;
   }
 
-  .\31\/7--handheld-and-up {
+  .\31-7--handheld-and-up {
     width: 14.28571%;
   }
 
-  .\32\/7--handheld-and-up {
+  .\32-7--handheld-and-up {
     width: 28.57143%;
   }
 
-  .\33\/7--handheld-and-up {
+  .\33-7--handheld-and-up {
     width: 42.85714%;
   }
 
-  .\34\/7--handheld-and-up {
+  .\34-7--handheld-and-up {
     width: 57.14286%;
   }
 
-  .\35\/7--handheld-and-up {
+  .\35-7--handheld-and-up {
     width: 71.42857%;
   }
 
-  .\36\/7--handheld-and-up {
+  .\36-7--handheld-and-up {
     width: 85.71429%;
   }
 
-  .\31\/8--handheld-and-up {
+  .\31-8--handheld-and-up {
     width: 12.5%;
   }
 
-  .\33\/8--handheld-and-up {
+  .\33-8--handheld-and-up {
     width: 37.5%;
   }
 
-  .\35\/8--handheld-and-up {
+  .\35-8--handheld-and-up {
     width: 62.5%;
   }
 
-  .\37\/8--handheld-and-up {
+  .\37-8--handheld-and-up {
     width: 87.5%;
   }
 
-  .\31\/9--handheld-and-up {
+  .\31-9--handheld-and-up {
     width: 11.11111%;
   }
 
-  .\32\/9--handheld-and-up {
+  .\32-9--handheld-and-up {
     width: 22.22222%;
   }
 
-  .\34\/9--handheld-and-up {
+  .\34-9--handheld-and-up {
     width: 44.44444%;
   }
 
-  .\35\/9--handheld-and-up {
+  .\35-9--handheld-and-up {
     width: 55.55556%;
   }
 
-  .\37\/9--handheld-and-up {
+  .\37-9--handheld-and-up {
     width: 77.77778%;
   }
 
-  .\38\/9--handheld-and-up {
+  .\38-9--handheld-and-up {
     width: 88.88889%;
   }
 
-  .\31\/10--handheld-and-up {
+  .\31-10--handheld-and-up {
     width: 10%;
   }
 
-  .\33\/10--handheld-and-up {
+  .\33-10--handheld-and-up {
     width: 30%;
   }
 
-  .\37\/10--handheld-and-up {
+  .\37-10--handheld-and-up {
     width: 70%;
   }
 
-  .\39\/10--handheld-and-up {
+  .\39-10--handheld-and-up {
     width: 90%;
   }
 
-  .\31\/11--handheld-and-up {
+  .\31-11--handheld-and-up {
     width: 9.09091%;
   }
 
-  .\32\/11--handheld-and-up {
+  .\32-11--handheld-and-up {
     width: 18.18182%;
   }
 
-  .\33\/11--handheld-and-up {
+  .\33-11--handheld-and-up {
     width: 27.27273%;
   }
 
-  .\34\/11--handheld-and-up {
+  .\34-11--handheld-and-up {
     width: 36.36364%;
   }
 
-  .\35\/11--handheld-and-up {
+  .\35-11--handheld-and-up {
     width: 45.45455%;
   }
 
-  .\36\/11--handheld-and-up {
+  .\36-11--handheld-and-up {
     width: 54.54545%;
   }
 
-  .\37\/11--handheld-and-up {
+  .\37-11--handheld-and-up {
     width: 63.63636%;
   }
 
-  .\38\/11--handheld-and-up {
+  .\38-11--handheld-and-up {
     width: 72.72727%;
   }
 
-  .\39\/11--handheld-and-up {
+  .\39-11--handheld-and-up {
     width: 81.81818%;
   }
 
-  .\3130\/11--handheld-and-up {
+  .\3130-11--handheld-and-up {
     width: 90.90909%;
   }
 
-  .\31\/12--handheld-and-up {
+  .\31-12--handheld-and-up {
     width: 8.33333%;
   }
 
-  .\35\/12--handheld-and-up {
+  .\35-12--handheld-and-up {
     width: 41.66667%;
   }
 
-  .\37\/12--handheld-and-up {
+  .\37-12--handheld-and-up {
     width: 58.33333%;
   }
 
-  .\3131\/12--handheld-and-up {
+  .\3131-12--handheld-and-up {
     width: 91.66667%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .\31\/1--tablet {
+  .\31-1--tablet {
     width: 100%;
   }
 
-  .\31\/2--tablet,
-  .\32\/4--tablet,
-  .\33\/6--tablet,
-  .\34\/8--tablet,
-  .\35\/10--tablet,
-  .\36\/12--tablet {
+  .\31-2--tablet,
+  .\32-4--tablet,
+  .\33-6--tablet,
+  .\34-8--tablet,
+  .\35-10--tablet,
+  .\36-12--tablet {
     width: 50%;
   }
 
-  .\31\/3--tablet,
-  .\32\/6--tablet,
-  .\33\/9--tablet,
-  .\34\/12--tablet {
+  .\31-3--tablet,
+  .\32-6--tablet,
+  .\33-9--tablet,
+  .\34-12--tablet {
     width: 33.33333%;
   }
 
-  .\32\/3--tablet,
-  .\34\/6--tablet,
-  .\36\/9--tablet,
-  .\38\/12--tablet {
+  .\32-3--tablet,
+  .\34-6--tablet,
+  .\36-9--tablet,
+  .\38-12--tablet {
     width: 66.66667%;
   }
 
-  .\31\/4--tablet,
-  .\32\/8--tablet,
-  .\33\/12--tablet {
+  .\31-4--tablet,
+  .\32-8--tablet,
+  .\33-12--tablet {
     width: 25%;
   }
 
-  .\33\/4--tablet,
-  .\36\/8--tablet,
-  .\39\/12--tablet {
+  .\33-4--tablet,
+  .\36-8--tablet,
+  .\39-12--tablet {
     width: 75%;
   }
 
-  .\31\/5--tablet,
-  .\32\/10--tablet {
+  .\31-5--tablet,
+  .\32-10--tablet {
     width: 20%;
   }
 
-  .\32\/5--tablet,
-  .\34\/10--tablet {
+  .\32-5--tablet,
+  .\34-10--tablet {
     width: 40%;
   }
 
-  .\33\/5--tablet,
-  .\36\/10--tablet {
+  .\33-5--tablet,
+  .\36-10--tablet {
     width: 60%;
   }
 
-  .\34\/5--tablet,
-  .\38\/10--tablet {
+  .\34-5--tablet,
+  .\38-10--tablet {
     width: 80%;
   }
 
-  .\31\/6--tablet,
-  .\32\/12--tablet {
+  .\31-6--tablet,
+  .\32-12--tablet {
     width: 16.66667%;
   }
 
-  .\35\/6--tablet,
-  .\3130\/12--tablet {
+  .\35-6--tablet,
+  .\3130-12--tablet {
     width: 83.33333%;
   }
 
-  .\31\/7--tablet {
+  .\31-7--tablet {
     width: 14.28571%;
   }
 
-  .\32\/7--tablet {
+  .\32-7--tablet {
     width: 28.57143%;
   }
 
-  .\33\/7--tablet {
+  .\33-7--tablet {
     width: 42.85714%;
   }
 
-  .\34\/7--tablet {
+  .\34-7--tablet {
     width: 57.14286%;
   }
 
-  .\35\/7--tablet {
+  .\35-7--tablet {
     width: 71.42857%;
   }
 
-  .\36\/7--tablet {
+  .\36-7--tablet {
     width: 85.71429%;
   }
 
-  .\31\/8--tablet {
+  .\31-8--tablet {
     width: 12.5%;
   }
 
-  .\33\/8--tablet {
+  .\33-8--tablet {
     width: 37.5%;
   }
 
-  .\35\/8--tablet {
+  .\35-8--tablet {
     width: 62.5%;
   }
 
-  .\37\/8--tablet {
+  .\37-8--tablet {
     width: 87.5%;
   }
 
-  .\31\/9--tablet {
+  .\31-9--tablet {
     width: 11.11111%;
   }
 
-  .\32\/9--tablet {
+  .\32-9--tablet {
     width: 22.22222%;
   }
 
-  .\34\/9--tablet {
+  .\34-9--tablet {
     width: 44.44444%;
   }
 
-  .\35\/9--tablet {
+  .\35-9--tablet {
     width: 55.55556%;
   }
 
-  .\37\/9--tablet {
+  .\37-9--tablet {
     width: 77.77778%;
   }
 
-  .\38\/9--tablet {
+  .\38-9--tablet {
     width: 88.88889%;
   }
 
-  .\31\/10--tablet {
+  .\31-10--tablet {
     width: 10%;
   }
 
-  .\33\/10--tablet {
+  .\33-10--tablet {
     width: 30%;
   }
 
-  .\37\/10--tablet {
+  .\37-10--tablet {
     width: 70%;
   }
 
-  .\39\/10--tablet {
+  .\39-10--tablet {
     width: 90%;
   }
 
-  .\31\/11--tablet {
+  .\31-11--tablet {
     width: 9.09091%;
   }
 
-  .\32\/11--tablet {
+  .\32-11--tablet {
     width: 18.18182%;
   }
 
-  .\33\/11--tablet {
+  .\33-11--tablet {
     width: 27.27273%;
   }
 
-  .\34\/11--tablet {
+  .\34-11--tablet {
     width: 36.36364%;
   }
 
-  .\35\/11--tablet {
+  .\35-11--tablet {
     width: 45.45455%;
   }
 
-  .\36\/11--tablet {
+  .\36-11--tablet {
     width: 54.54545%;
   }
 
-  .\37\/11--tablet {
+  .\37-11--tablet {
     width: 63.63636%;
   }
 
-  .\38\/11--tablet {
+  .\38-11--tablet {
     width: 72.72727%;
   }
 
-  .\39\/11--tablet {
+  .\39-11--tablet {
     width: 81.81818%;
   }
 
-  .\3130\/11--tablet {
+  .\3130-11--tablet {
     width: 90.90909%;
   }
 
-  .\31\/12--tablet {
+  .\31-12--tablet {
     width: 8.33333%;
   }
 
-  .\35\/12--tablet {
+  .\35-12--tablet {
     width: 41.66667%;
   }
 
-  .\37\/12--tablet {
+  .\37-12--tablet {
     width: 58.33333%;
   }
 
-  .\3131\/12--tablet {
+  .\3131-12--tablet {
     width: 91.66667%;
   }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1024px) {
-  .\31\/1--lap {
+  .\31-1--lap {
     width: 100%;
   }
 
-  .\31\/2--lap,
-  .\32\/4--lap,
-  .\33\/6--lap,
-  .\34\/8--lap,
-  .\35\/10--lap,
-  .\36\/12--lap {
+  .\31-2--lap,
+  .\32-4--lap,
+  .\33-6--lap,
+  .\34-8--lap,
+  .\35-10--lap,
+  .\36-12--lap {
     width: 50%;
   }
 
-  .\31\/3--lap,
-  .\32\/6--lap,
-  .\33\/9--lap,
-  .\34\/12--lap {
+  .\31-3--lap,
+  .\32-6--lap,
+  .\33-9--lap,
+  .\34-12--lap {
     width: 33.33333%;
   }
 
-  .\32\/3--lap,
-  .\34\/6--lap,
-  .\36\/9--lap,
-  .\38\/12--lap {
+  .\32-3--lap,
+  .\34-6--lap,
+  .\36-9--lap,
+  .\38-12--lap {
     width: 66.66667%;
   }
 
-  .\31\/4--lap,
-  .\32\/8--lap,
-  .\33\/12--lap {
+  .\31-4--lap,
+  .\32-8--lap,
+  .\33-12--lap {
     width: 25%;
   }
 
-  .\33\/4--lap,
-  .\36\/8--lap,
-  .\39\/12--lap {
+  .\33-4--lap,
+  .\36-8--lap,
+  .\39-12--lap {
     width: 75%;
   }
 
-  .\31\/5--lap,
-  .\32\/10--lap {
+  .\31-5--lap,
+  .\32-10--lap {
     width: 20%;
   }
 
-  .\32\/5--lap,
-  .\34\/10--lap {
+  .\32-5--lap,
+  .\34-10--lap {
     width: 40%;
   }
 
-  .\33\/5--lap,
-  .\36\/10--lap {
+  .\33-5--lap,
+  .\36-10--lap {
     width: 60%;
   }
 
-  .\34\/5--lap,
-  .\38\/10--lap {
+  .\34-5--lap,
+  .\38-10--lap {
     width: 80%;
   }
 
-  .\31\/6--lap,
-  .\32\/12--lap {
+  .\31-6--lap,
+  .\32-12--lap {
     width: 16.66667%;
   }
 
-  .\35\/6--lap,
-  .\3130\/12--lap {
+  .\35-6--lap,
+  .\3130-12--lap {
     width: 83.33333%;
   }
 
-  .\31\/7--lap {
+  .\31-7--lap {
     width: 14.28571%;
   }
 
-  .\32\/7--lap {
+  .\32-7--lap {
     width: 28.57143%;
   }
 
-  .\33\/7--lap {
+  .\33-7--lap {
     width: 42.85714%;
   }
 
-  .\34\/7--lap {
+  .\34-7--lap {
     width: 57.14286%;
   }
 
-  .\35\/7--lap {
+  .\35-7--lap {
     width: 71.42857%;
   }
 
-  .\36\/7--lap {
+  .\36-7--lap {
     width: 85.71429%;
   }
 
-  .\31\/8--lap {
+  .\31-8--lap {
     width: 12.5%;
   }
 
-  .\33\/8--lap {
+  .\33-8--lap {
     width: 37.5%;
   }
 
-  .\35\/8--lap {
+  .\35-8--lap {
     width: 62.5%;
   }
 
-  .\37\/8--lap {
+  .\37-8--lap {
     width: 87.5%;
   }
 
-  .\31\/9--lap {
+  .\31-9--lap {
     width: 11.11111%;
   }
 
-  .\32\/9--lap {
+  .\32-9--lap {
     width: 22.22222%;
   }
 
-  .\34\/9--lap {
+  .\34-9--lap {
     width: 44.44444%;
   }
 
-  .\35\/9--lap {
+  .\35-9--lap {
     width: 55.55556%;
   }
 
-  .\37\/9--lap {
+  .\37-9--lap {
     width: 77.77778%;
   }
 
-  .\38\/9--lap {
+  .\38-9--lap {
     width: 88.88889%;
   }
 
-  .\31\/10--lap {
+  .\31-10--lap {
     width: 10%;
   }
 
-  .\33\/10--lap {
+  .\33-10--lap {
     width: 30%;
   }
 
-  .\37\/10--lap {
+  .\37-10--lap {
     width: 70%;
   }
 
-  .\39\/10--lap {
+  .\39-10--lap {
     width: 90%;
   }
 
-  .\31\/11--lap {
+  .\31-11--lap {
     width: 9.09091%;
   }
 
-  .\32\/11--lap {
+  .\32-11--lap {
     width: 18.18182%;
   }
 
-  .\33\/11--lap {
+  .\33-11--lap {
     width: 27.27273%;
   }
 
-  .\34\/11--lap {
+  .\34-11--lap {
     width: 36.36364%;
   }
 
-  .\35\/11--lap {
+  .\35-11--lap {
     width: 45.45455%;
   }
 
-  .\36\/11--lap {
+  .\36-11--lap {
     width: 54.54545%;
   }
 
-  .\37\/11--lap {
+  .\37-11--lap {
     width: 63.63636%;
   }
 
-  .\38\/11--lap {
+  .\38-11--lap {
     width: 72.72727%;
   }
 
-  .\39\/11--lap {
+  .\39-11--lap {
     width: 81.81818%;
   }
 
-  .\3130\/11--lap {
+  .\3130-11--lap {
     width: 90.90909%;
   }
 
-  .\31\/12--lap {
+  .\31-12--lap {
     width: 8.33333%;
   }
 
-  .\35\/12--lap {
+  .\35-12--lap {
     width: 41.66667%;
   }
 
-  .\37\/12--lap {
+  .\37-12--lap {
     width: 58.33333%;
   }
 
-  .\3131\/12--lap {
+  .\3131-12--lap {
     width: 91.66667%;
   }
 }
 
 @media screen and (min-width: 801px) {
-  .\31\/1--lap-and-up {
+  .\31-1--lap-and-up {
     width: 100%;
   }
 
-  .\31\/2--lap-and-up,
-  .\32\/4--lap-and-up,
-  .\33\/6--lap-and-up,
-  .\34\/8--lap-and-up,
-  .\35\/10--lap-and-up,
-  .\36\/12--lap-and-up {
+  .\31-2--lap-and-up,
+  .\32-4--lap-and-up,
+  .\33-6--lap-and-up,
+  .\34-8--lap-and-up,
+  .\35-10--lap-and-up,
+  .\36-12--lap-and-up {
     width: 50%;
   }
 
-  .\31\/3--lap-and-up,
-  .\32\/6--lap-and-up,
-  .\33\/9--lap-and-up,
-  .\34\/12--lap-and-up {
+  .\31-3--lap-and-up,
+  .\32-6--lap-and-up,
+  .\33-9--lap-and-up,
+  .\34-12--lap-and-up {
     width: 33.33333%;
   }
 
-  .\32\/3--lap-and-up,
-  .\34\/6--lap-and-up,
-  .\36\/9--lap-and-up,
-  .\38\/12--lap-and-up {
+  .\32-3--lap-and-up,
+  .\34-6--lap-and-up,
+  .\36-9--lap-and-up,
+  .\38-12--lap-and-up {
     width: 66.66667%;
   }
 
-  .\31\/4--lap-and-up,
-  .\32\/8--lap-and-up,
-  .\33\/12--lap-and-up {
+  .\31-4--lap-and-up,
+  .\32-8--lap-and-up,
+  .\33-12--lap-and-up {
     width: 25%;
   }
 
-  .\33\/4--lap-and-up,
-  .\36\/8--lap-and-up,
-  .\39\/12--lap-and-up {
+  .\33-4--lap-and-up,
+  .\36-8--lap-and-up,
+  .\39-12--lap-and-up {
     width: 75%;
   }
 
-  .\31\/5--lap-and-up,
-  .\32\/10--lap-and-up {
+  .\31-5--lap-and-up,
+  .\32-10--lap-and-up {
     width: 20%;
   }
 
-  .\32\/5--lap-and-up,
-  .\34\/10--lap-and-up {
+  .\32-5--lap-and-up,
+  .\34-10--lap-and-up {
     width: 40%;
   }
 
-  .\33\/5--lap-and-up,
-  .\36\/10--lap-and-up {
+  .\33-5--lap-and-up,
+  .\36-10--lap-and-up {
     width: 60%;
   }
 
-  .\34\/5--lap-and-up,
-  .\38\/10--lap-and-up {
+  .\34-5--lap-and-up,
+  .\38-10--lap-and-up {
     width: 80%;
   }
 
-  .\31\/6--lap-and-up,
-  .\32\/12--lap-and-up {
+  .\31-6--lap-and-up,
+  .\32-12--lap-and-up {
     width: 16.66667%;
   }
 
-  .\35\/6--lap-and-up,
-  .\3130\/12--lap-and-up {
+  .\35-6--lap-and-up,
+  .\3130-12--lap-and-up {
     width: 83.33333%;
   }
 
-  .\31\/7--lap-and-up {
+  .\31-7--lap-and-up {
     width: 14.28571%;
   }
 
-  .\32\/7--lap-and-up {
+  .\32-7--lap-and-up {
     width: 28.57143%;
   }
 
-  .\33\/7--lap-and-up {
+  .\33-7--lap-and-up {
     width: 42.85714%;
   }
 
-  .\34\/7--lap-and-up {
+  .\34-7--lap-and-up {
     width: 57.14286%;
   }
 
-  .\35\/7--lap-and-up {
+  .\35-7--lap-and-up {
     width: 71.42857%;
   }
 
-  .\36\/7--lap-and-up {
+  .\36-7--lap-and-up {
     width: 85.71429%;
   }
 
-  .\31\/8--lap-and-up {
+  .\31-8--lap-and-up {
     width: 12.5%;
   }
 
-  .\33\/8--lap-and-up {
+  .\33-8--lap-and-up {
     width: 37.5%;
   }
 
-  .\35\/8--lap-and-up {
+  .\35-8--lap-and-up {
     width: 62.5%;
   }
 
-  .\37\/8--lap-and-up {
+  .\37-8--lap-and-up {
     width: 87.5%;
   }
 
-  .\31\/9--lap-and-up {
+  .\31-9--lap-and-up {
     width: 11.11111%;
   }
 
-  .\32\/9--lap-and-up {
+  .\32-9--lap-and-up {
     width: 22.22222%;
   }
 
-  .\34\/9--lap-and-up {
+  .\34-9--lap-and-up {
     width: 44.44444%;
   }
 
-  .\35\/9--lap-and-up {
+  .\35-9--lap-and-up {
     width: 55.55556%;
   }
 
-  .\37\/9--lap-and-up {
+  .\37-9--lap-and-up {
     width: 77.77778%;
   }
 
-  .\38\/9--lap-and-up {
+  .\38-9--lap-and-up {
     width: 88.88889%;
   }
 
-  .\31\/10--lap-and-up {
+  .\31-10--lap-and-up {
     width: 10%;
   }
 
-  .\33\/10--lap-and-up {
+  .\33-10--lap-and-up {
     width: 30%;
   }
 
-  .\37\/10--lap-and-up {
+  .\37-10--lap-and-up {
     width: 70%;
   }
 
-  .\39\/10--lap-and-up {
+  .\39-10--lap-and-up {
     width: 90%;
   }
 
-  .\31\/11--lap-and-up {
+  .\31-11--lap-and-up {
     width: 9.09091%;
   }
 
-  .\32\/11--lap-and-up {
+  .\32-11--lap-and-up {
     width: 18.18182%;
   }
 
-  .\33\/11--lap-and-up {
+  .\33-11--lap-and-up {
     width: 27.27273%;
   }
 
-  .\34\/11--lap-and-up {
+  .\34-11--lap-and-up {
     width: 36.36364%;
   }
 
-  .\35\/11--lap-and-up {
+  .\35-11--lap-and-up {
     width: 45.45455%;
   }
 
-  .\36\/11--lap-and-up {
+  .\36-11--lap-and-up {
     width: 54.54545%;
   }
 
-  .\37\/11--lap-and-up {
+  .\37-11--lap-and-up {
     width: 63.63636%;
   }
 
-  .\38\/11--lap-and-up {
+  .\38-11--lap-and-up {
     width: 72.72727%;
   }
 
-  .\39\/11--lap-and-up {
+  .\39-11--lap-and-up {
     width: 81.81818%;
   }
 
-  .\3130\/11--lap-and-up {
+  .\3130-11--lap-and-up {
     width: 90.90909%;
   }
 
-  .\31\/12--lap-and-up {
+  .\31-12--lap-and-up {
     width: 8.33333%;
   }
 
-  .\35\/12--lap-and-up {
+  .\35-12--lap-and-up {
     width: 41.66667%;
   }
 
-  .\37\/12--lap-and-up {
+  .\37-12--lap-and-up {
     width: 58.33333%;
   }
 
-  .\3131\/12--lap-and-up {
+  .\3131-12--lap-and-up {
     width: 91.66667%;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .\31\/1--desktop {
+  .\31-1--desktop {
     width: 100%;
   }
 
-  .\31\/2--desktop,
-  .\32\/4--desktop,
-  .\33\/6--desktop,
-  .\34\/8--desktop,
-  .\35\/10--desktop,
-  .\36\/12--desktop {
+  .\31-2--desktop,
+  .\32-4--desktop,
+  .\33-6--desktop,
+  .\34-8--desktop,
+  .\35-10--desktop,
+  .\36-12--desktop {
     width: 50%;
   }
 
-  .\31\/3--desktop,
-  .\32\/6--desktop,
-  .\33\/9--desktop,
-  .\34\/12--desktop {
+  .\31-3--desktop,
+  .\32-6--desktop,
+  .\33-9--desktop,
+  .\34-12--desktop {
     width: 33.33333%;
   }
 
-  .\32\/3--desktop,
-  .\34\/6--desktop,
-  .\36\/9--desktop,
-  .\38\/12--desktop {
+  .\32-3--desktop,
+  .\34-6--desktop,
+  .\36-9--desktop,
+  .\38-12--desktop {
     width: 66.66667%;
   }
 
-  .\31\/4--desktop,
-  .\32\/8--desktop,
-  .\33\/12--desktop {
+  .\31-4--desktop,
+  .\32-8--desktop,
+  .\33-12--desktop {
     width: 25%;
   }
 
-  .\33\/4--desktop,
-  .\36\/8--desktop,
-  .\39\/12--desktop {
+  .\33-4--desktop,
+  .\36-8--desktop,
+  .\39-12--desktop {
     width: 75%;
   }
 
-  .\31\/5--desktop,
-  .\32\/10--desktop {
+  .\31-5--desktop,
+  .\32-10--desktop {
     width: 20%;
   }
 
-  .\32\/5--desktop,
-  .\34\/10--desktop {
+  .\32-5--desktop,
+  .\34-10--desktop {
     width: 40%;
   }
 
-  .\33\/5--desktop,
-  .\36\/10--desktop {
+  .\33-5--desktop,
+  .\36-10--desktop {
     width: 60%;
   }
 
-  .\34\/5--desktop,
-  .\38\/10--desktop {
+  .\34-5--desktop,
+  .\38-10--desktop {
     width: 80%;
   }
 
-  .\31\/6--desktop,
-  .\32\/12--desktop {
+  .\31-6--desktop,
+  .\32-12--desktop {
     width: 16.66667%;
   }
 
-  .\35\/6--desktop,
-  .\3130\/12--desktop {
+  .\35-6--desktop,
+  .\3130-12--desktop {
     width: 83.33333%;
   }
 
-  .\31\/7--desktop {
+  .\31-7--desktop {
     width: 14.28571%;
   }
 
-  .\32\/7--desktop {
+  .\32-7--desktop {
     width: 28.57143%;
   }
 
-  .\33\/7--desktop {
+  .\33-7--desktop {
     width: 42.85714%;
   }
 
-  .\34\/7--desktop {
+  .\34-7--desktop {
     width: 57.14286%;
   }
 
-  .\35\/7--desktop {
+  .\35-7--desktop {
     width: 71.42857%;
   }
 
-  .\36\/7--desktop {
+  .\36-7--desktop {
     width: 85.71429%;
   }
 
-  .\31\/8--desktop {
+  .\31-8--desktop {
     width: 12.5%;
   }
 
-  .\33\/8--desktop {
+  .\33-8--desktop {
     width: 37.5%;
   }
 
-  .\35\/8--desktop {
+  .\35-8--desktop {
     width: 62.5%;
   }
 
-  .\37\/8--desktop {
+  .\37-8--desktop {
     width: 87.5%;
   }
 
-  .\31\/9--desktop {
+  .\31-9--desktop {
     width: 11.11111%;
   }
 
-  .\32\/9--desktop {
+  .\32-9--desktop {
     width: 22.22222%;
   }
 
-  .\34\/9--desktop {
+  .\34-9--desktop {
     width: 44.44444%;
   }
 
-  .\35\/9--desktop {
+  .\35-9--desktop {
     width: 55.55556%;
   }
 
-  .\37\/9--desktop {
+  .\37-9--desktop {
     width: 77.77778%;
   }
 
-  .\38\/9--desktop {
+  .\38-9--desktop {
     width: 88.88889%;
   }
 
-  .\31\/10--desktop {
+  .\31-10--desktop {
     width: 10%;
   }
 
-  .\33\/10--desktop {
+  .\33-10--desktop {
     width: 30%;
   }
 
-  .\37\/10--desktop {
+  .\37-10--desktop {
     width: 70%;
   }
 
-  .\39\/10--desktop {
+  .\39-10--desktop {
     width: 90%;
   }
 
-  .\31\/11--desktop {
+  .\31-11--desktop {
     width: 9.09091%;
   }
 
-  .\32\/11--desktop {
+  .\32-11--desktop {
     width: 18.18182%;
   }
 
-  .\33\/11--desktop {
+  .\33-11--desktop {
     width: 27.27273%;
   }
 
-  .\34\/11--desktop {
+  .\34-11--desktop {
     width: 36.36364%;
   }
 
-  .\35\/11--desktop {
+  .\35-11--desktop {
     width: 45.45455%;
   }
 
-  .\36\/11--desktop {
+  .\36-11--desktop {
     width: 54.54545%;
   }
 
-  .\37\/11--desktop {
+  .\37-11--desktop {
     width: 63.63636%;
   }
 
-  .\38\/11--desktop {
+  .\38-11--desktop {
     width: 72.72727%;
   }
 
-  .\39\/11--desktop {
+  .\39-11--desktop {
     width: 81.81818%;
   }
 
-  .\3130\/11--desktop {
+  .\3130-11--desktop {
     width: 90.90909%;
   }
 
-  .\31\/12--desktop {
+  .\31-12--desktop {
     width: 8.33333%;
   }
 
-  .\35\/12--desktop {
+  .\35-12--desktop {
     width: 41.66667%;
   }
 
-  .\37\/12--desktop {
+  .\37-12--desktop {
     width: 58.33333%;
   }
 
-  .\3131\/12--desktop {
+  .\3131-12--desktop {
     width: 91.66667%;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .\31\/1--desk {
+  .\31-1--desk {
     width: 100%;
   }
 
-  .\31\/2--desk,
-  .\32\/4--desk,
-  .\33\/6--desk,
-  .\34\/8--desk,
-  .\35\/10--desk,
-  .\36\/12--desk {
+  .\31-2--desk,
+  .\32-4--desk,
+  .\33-6--desk,
+  .\34-8--desk,
+  .\35-10--desk,
+  .\36-12--desk {
     width: 50%;
   }
 
-  .\31\/3--desk,
-  .\32\/6--desk,
-  .\33\/9--desk,
-  .\34\/12--desk {
+  .\31-3--desk,
+  .\32-6--desk,
+  .\33-9--desk,
+  .\34-12--desk {
     width: 33.33333%;
   }
 
-  .\32\/3--desk,
-  .\34\/6--desk,
-  .\36\/9--desk,
-  .\38\/12--desk {
+  .\32-3--desk,
+  .\34-6--desk,
+  .\36-9--desk,
+  .\38-12--desk {
     width: 66.66667%;
   }
 
-  .\31\/4--desk,
-  .\32\/8--desk,
-  .\33\/12--desk {
+  .\31-4--desk,
+  .\32-8--desk,
+  .\33-12--desk {
     width: 25%;
   }
 
-  .\33\/4--desk,
-  .\36\/8--desk,
-  .\39\/12--desk {
+  .\33-4--desk,
+  .\36-8--desk,
+  .\39-12--desk {
     width: 75%;
   }
 
-  .\31\/5--desk,
-  .\32\/10--desk {
+  .\31-5--desk,
+  .\32-10--desk {
     width: 20%;
   }
 
-  .\32\/5--desk,
-  .\34\/10--desk {
+  .\32-5--desk,
+  .\34-10--desk {
     width: 40%;
   }
 
-  .\33\/5--desk,
-  .\36\/10--desk {
+  .\33-5--desk,
+  .\36-10--desk {
     width: 60%;
   }
 
-  .\34\/5--desk,
-  .\38\/10--desk {
+  .\34-5--desk,
+  .\38-10--desk {
     width: 80%;
   }
 
-  .\31\/6--desk,
-  .\32\/12--desk {
+  .\31-6--desk,
+  .\32-12--desk {
     width: 16.66667%;
   }
 
-  .\35\/6--desk,
-  .\3130\/12--desk {
+  .\35-6--desk,
+  .\3130-12--desk {
     width: 83.33333%;
   }
 
-  .\31\/7--desk {
+  .\31-7--desk {
     width: 14.28571%;
   }
 
-  .\32\/7--desk {
+  .\32-7--desk {
     width: 28.57143%;
   }
 
-  .\33\/7--desk {
+  .\33-7--desk {
     width: 42.85714%;
   }
 
-  .\34\/7--desk {
+  .\34-7--desk {
     width: 57.14286%;
   }
 
-  .\35\/7--desk {
+  .\35-7--desk {
     width: 71.42857%;
   }
 
-  .\36\/7--desk {
+  .\36-7--desk {
     width: 85.71429%;
   }
 
-  .\31\/8--desk {
+  .\31-8--desk {
     width: 12.5%;
   }
 
-  .\33\/8--desk {
+  .\33-8--desk {
     width: 37.5%;
   }
 
-  .\35\/8--desk {
+  .\35-8--desk {
     width: 62.5%;
   }
 
-  .\37\/8--desk {
+  .\37-8--desk {
     width: 87.5%;
   }
 
-  .\31\/9--desk {
+  .\31-9--desk {
     width: 11.11111%;
   }
 
-  .\32\/9--desk {
+  .\32-9--desk {
     width: 22.22222%;
   }
 
-  .\34\/9--desk {
+  .\34-9--desk {
     width: 44.44444%;
   }
 
-  .\35\/9--desk {
+  .\35-9--desk {
     width: 55.55556%;
   }
 
-  .\37\/9--desk {
+  .\37-9--desk {
     width: 77.77778%;
   }
 
-  .\38\/9--desk {
+  .\38-9--desk {
     width: 88.88889%;
   }
 
-  .\31\/10--desk {
+  .\31-10--desk {
     width: 10%;
   }
 
-  .\33\/10--desk {
+  .\33-10--desk {
     width: 30%;
   }
 
-  .\37\/10--desk {
+  .\37-10--desk {
     width: 70%;
   }
 
-  .\39\/10--desk {
+  .\39-10--desk {
     width: 90%;
   }
 
-  .\31\/11--desk {
+  .\31-11--desk {
     width: 9.09091%;
   }
 
-  .\32\/11--desk {
+  .\32-11--desk {
     width: 18.18182%;
   }
 
-  .\33\/11--desk {
+  .\33-11--desk {
     width: 27.27273%;
   }
 
-  .\34\/11--desk {
+  .\34-11--desk {
     width: 36.36364%;
   }
 
-  .\35\/11--desk {
+  .\35-11--desk {
     width: 45.45455%;
   }
 
-  .\36\/11--desk {
+  .\36-11--desk {
     width: 54.54545%;
   }
 
-  .\37\/11--desk {
+  .\37-11--desk {
     width: 63.63636%;
   }
 
-  .\38\/11--desk {
+  .\38-11--desk {
     width: 72.72727%;
   }
 
-  .\39\/11--desk {
+  .\39-11--desk {
     width: 81.81818%;
   }
 
-  .\3130\/11--desk {
+  .\3130-11--desk {
     width: 90.90909%;
   }
 
-  .\31\/12--desk {
+  .\31-12--desk {
     width: 8.33333%;
   }
 
-  .\35\/12--desk {
+  .\35-12--desk {
     width: 41.66667%;
   }
 
-  .\37\/12--desk {
+  .\37-12--desk {
     width: 58.33333%;
   }
 
-  .\3131\/12--desk {
+  .\3131-12--desk {
     width: 91.66667%;
   }
 }
 
 @media screen and (min-width: 1160px) {
-  .\31\/1--widescreen {
+  .\31-1--widescreen {
     width: 100%;
   }
 
-  .\31\/2--widescreen,
-  .\32\/4--widescreen,
-  .\33\/6--widescreen,
-  .\34\/8--widescreen,
-  .\35\/10--widescreen,
-  .\36\/12--widescreen {
+  .\31-2--widescreen,
+  .\32-4--widescreen,
+  .\33-6--widescreen,
+  .\34-8--widescreen,
+  .\35-10--widescreen,
+  .\36-12--widescreen {
     width: 50%;
   }
 
-  .\31\/3--widescreen,
-  .\32\/6--widescreen,
-  .\33\/9--widescreen,
-  .\34\/12--widescreen {
+  .\31-3--widescreen,
+  .\32-6--widescreen,
+  .\33-9--widescreen,
+  .\34-12--widescreen {
     width: 33.33333%;
   }
 
-  .\32\/3--widescreen,
-  .\34\/6--widescreen,
-  .\36\/9--widescreen,
-  .\38\/12--widescreen {
+  .\32-3--widescreen,
+  .\34-6--widescreen,
+  .\36-9--widescreen,
+  .\38-12--widescreen {
     width: 66.66667%;
   }
 
-  .\31\/4--widescreen,
-  .\32\/8--widescreen,
-  .\33\/12--widescreen {
+  .\31-4--widescreen,
+  .\32-8--widescreen,
+  .\33-12--widescreen {
     width: 25%;
   }
 
-  .\33\/4--widescreen,
-  .\36\/8--widescreen,
-  .\39\/12--widescreen {
+  .\33-4--widescreen,
+  .\36-8--widescreen,
+  .\39-12--widescreen {
     width: 75%;
   }
 
-  .\31\/5--widescreen,
-  .\32\/10--widescreen {
+  .\31-5--widescreen,
+  .\32-10--widescreen {
     width: 20%;
   }
 
-  .\32\/5--widescreen,
-  .\34\/10--widescreen {
+  .\32-5--widescreen,
+  .\34-10--widescreen {
     width: 40%;
   }
 
-  .\33\/5--widescreen,
-  .\36\/10--widescreen {
+  .\33-5--widescreen,
+  .\36-10--widescreen {
     width: 60%;
   }
 
-  .\34\/5--widescreen,
-  .\38\/10--widescreen {
+  .\34-5--widescreen,
+  .\38-10--widescreen {
     width: 80%;
   }
 
-  .\31\/6--widescreen,
-  .\32\/12--widescreen {
+  .\31-6--widescreen,
+  .\32-12--widescreen {
     width: 16.66667%;
   }
 
-  .\35\/6--widescreen,
-  .\3130\/12--widescreen {
+  .\35-6--widescreen,
+  .\3130-12--widescreen {
     width: 83.33333%;
   }
 
-  .\31\/7--widescreen {
+  .\31-7--widescreen {
     width: 14.28571%;
   }
 
-  .\32\/7--widescreen {
+  .\32-7--widescreen {
     width: 28.57143%;
   }
 
-  .\33\/7--widescreen {
+  .\33-7--widescreen {
     width: 42.85714%;
   }
 
-  .\34\/7--widescreen {
+  .\34-7--widescreen {
     width: 57.14286%;
   }
 
-  .\35\/7--widescreen {
+  .\35-7--widescreen {
     width: 71.42857%;
   }
 
-  .\36\/7--widescreen {
+  .\36-7--widescreen {
     width: 85.71429%;
   }
 
-  .\31\/8--widescreen {
+  .\31-8--widescreen {
     width: 12.5%;
   }
 
-  .\33\/8--widescreen {
+  .\33-8--widescreen {
     width: 37.5%;
   }
 
-  .\35\/8--widescreen {
+  .\35-8--widescreen {
     width: 62.5%;
   }
 
-  .\37\/8--widescreen {
+  .\37-8--widescreen {
     width: 87.5%;
   }
 
-  .\31\/9--widescreen {
+  .\31-9--widescreen {
     width: 11.11111%;
   }
 
-  .\32\/9--widescreen {
+  .\32-9--widescreen {
     width: 22.22222%;
   }
 
-  .\34\/9--widescreen {
+  .\34-9--widescreen {
     width: 44.44444%;
   }
 
-  .\35\/9--widescreen {
+  .\35-9--widescreen {
     width: 55.55556%;
   }
 
-  .\37\/9--widescreen {
+  .\37-9--widescreen {
     width: 77.77778%;
   }
 
-  .\38\/9--widescreen {
+  .\38-9--widescreen {
     width: 88.88889%;
   }
 
-  .\31\/10--widescreen {
+  .\31-10--widescreen {
     width: 10%;
   }
 
-  .\33\/10--widescreen {
+  .\33-10--widescreen {
     width: 30%;
   }
 
-  .\37\/10--widescreen {
+  .\37-10--widescreen {
     width: 70%;
   }
 
-  .\39\/10--widescreen {
+  .\39-10--widescreen {
     width: 90%;
   }
 
-  .\31\/11--widescreen {
+  .\31-11--widescreen {
     width: 9.09091%;
   }
 
-  .\32\/11--widescreen {
+  .\32-11--widescreen {
     width: 18.18182%;
   }
 
-  .\33\/11--widescreen {
+  .\33-11--widescreen {
     width: 27.27273%;
   }
 
-  .\34\/11--widescreen {
+  .\34-11--widescreen {
     width: 36.36364%;
   }
 
-  .\35\/11--widescreen {
+  .\35-11--widescreen {
     width: 45.45455%;
   }
 
-  .\36\/11--widescreen {
+  .\36-11--widescreen {
     width: 54.54545%;
   }
 
-  .\37\/11--widescreen {
+  .\37-11--widescreen {
     width: 63.63636%;
   }
 
-  .\38\/11--widescreen {
+  .\38-11--widescreen {
     width: 72.72727%;
   }
 
-  .\39\/11--widescreen {
+  .\39-11--widescreen {
     width: 81.81818%;
   }
 
-  .\3130\/11--widescreen {
+  .\3130-11--widescreen {
     width: 90.90909%;
   }
 
-  .\31\/12--widescreen {
+  .\31-12--widescreen {
     width: 8.33333%;
   }
 
-  .\35\/12--widescreen {
+  .\35-12--widescreen {
     width: 41.66667%;
   }
 
-  .\37\/12--widescreen {
+  .\37-12--widescreen {
     width: 58.33333%;
   }
 
-  .\3131\/12--widescreen {
+  .\3131-12--widescreen {
     width: 91.66667%;
   }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .\31\/1--retina {
+  .\31-1--retina {
     width: 100%;
   }
 
-  .\31\/2--retina,
-  .\32\/4--retina,
-  .\33\/6--retina,
-  .\34\/8--retina,
-  .\35\/10--retina,
-  .\36\/12--retina {
+  .\31-2--retina,
+  .\32-4--retina,
+  .\33-6--retina,
+  .\34-8--retina,
+  .\35-10--retina,
+  .\36-12--retina {
     width: 50%;
   }
 
-  .\31\/3--retina,
-  .\32\/6--retina,
-  .\33\/9--retina,
-  .\34\/12--retina {
+  .\31-3--retina,
+  .\32-6--retina,
+  .\33-9--retina,
+  .\34-12--retina {
     width: 33.33333%;
   }
 
-  .\32\/3--retina,
-  .\34\/6--retina,
-  .\36\/9--retina,
-  .\38\/12--retina {
+  .\32-3--retina,
+  .\34-6--retina,
+  .\36-9--retina,
+  .\38-12--retina {
     width: 66.66667%;
   }
 
-  .\31\/4--retina,
-  .\32\/8--retina,
-  .\33\/12--retina {
+  .\31-4--retina,
+  .\32-8--retina,
+  .\33-12--retina {
     width: 25%;
   }
 
-  .\33\/4--retina,
-  .\36\/8--retina,
-  .\39\/12--retina {
+  .\33-4--retina,
+  .\36-8--retina,
+  .\39-12--retina {
     width: 75%;
   }
 
-  .\31\/5--retina,
-  .\32\/10--retina {
+  .\31-5--retina,
+  .\32-10--retina {
     width: 20%;
   }
 
-  .\32\/5--retina,
-  .\34\/10--retina {
+  .\32-5--retina,
+  .\34-10--retina {
     width: 40%;
   }
 
-  .\33\/5--retina,
-  .\36\/10--retina {
+  .\33-5--retina,
+  .\36-10--retina {
     width: 60%;
   }
 
-  .\34\/5--retina,
-  .\38\/10--retina {
+  .\34-5--retina,
+  .\38-10--retina {
     width: 80%;
   }
 
-  .\31\/6--retina,
-  .\32\/12--retina {
+  .\31-6--retina,
+  .\32-12--retina {
     width: 16.66667%;
   }
 
-  .\35\/6--retina,
-  .\3130\/12--retina {
+  .\35-6--retina,
+  .\3130-12--retina {
     width: 83.33333%;
   }
 
-  .\31\/7--retina {
+  .\31-7--retina {
     width: 14.28571%;
   }
 
-  .\32\/7--retina {
+  .\32-7--retina {
     width: 28.57143%;
   }
 
-  .\33\/7--retina {
+  .\33-7--retina {
     width: 42.85714%;
   }
 
-  .\34\/7--retina {
+  .\34-7--retina {
     width: 57.14286%;
   }
 
-  .\35\/7--retina {
+  .\35-7--retina {
     width: 71.42857%;
   }
 
-  .\36\/7--retina {
+  .\36-7--retina {
     width: 85.71429%;
   }
 
-  .\31\/8--retina {
+  .\31-8--retina {
     width: 12.5%;
   }
 
-  .\33\/8--retina {
+  .\33-8--retina {
     width: 37.5%;
   }
 
-  .\35\/8--retina {
+  .\35-8--retina {
     width: 62.5%;
   }
 
-  .\37\/8--retina {
+  .\37-8--retina {
     width: 87.5%;
   }
 
-  .\31\/9--retina {
+  .\31-9--retina {
     width: 11.11111%;
   }
 
-  .\32\/9--retina {
+  .\32-9--retina {
     width: 22.22222%;
   }
 
-  .\34\/9--retina {
+  .\34-9--retina {
     width: 44.44444%;
   }
 
-  .\35\/9--retina {
+  .\35-9--retina {
     width: 55.55556%;
   }
 
-  .\37\/9--retina {
+  .\37-9--retina {
     width: 77.77778%;
   }
 
-  .\38\/9--retina {
+  .\38-9--retina {
     width: 88.88889%;
   }
 
-  .\31\/10--retina {
+  .\31-10--retina {
     width: 10%;
   }
 
-  .\33\/10--retina {
+  .\33-10--retina {
     width: 30%;
   }
 
-  .\37\/10--retina {
+  .\37-10--retina {
     width: 70%;
   }
 
-  .\39\/10--retina {
+  .\39-10--retina {
     width: 90%;
   }
 
-  .\31\/11--retina {
+  .\31-11--retina {
     width: 9.09091%;
   }
 
-  .\32\/11--retina {
+  .\32-11--retina {
     width: 18.18182%;
   }
 
-  .\33\/11--retina {
+  .\33-11--retina {
     width: 27.27273%;
   }
 
-  .\34\/11--retina {
+  .\34-11--retina {
     width: 36.36364%;
   }
 
-  .\35\/11--retina {
+  .\35-11--retina {
     width: 45.45455%;
   }
 
-  .\36\/11--retina {
+  .\36-11--retina {
     width: 54.54545%;
   }
 
-  .\37\/11--retina {
+  .\37-11--retina {
     width: 63.63636%;
   }
 
-  .\38\/11--retina {
+  .\38-11--retina {
     width: 72.72727%;
   }
 
-  .\39\/11--retina {
+  .\39-11--retina {
     width: 81.81818%;
   }
 
-  .\3130\/11--retina {
+  .\3130-11--retina {
     width: 90.90909%;
   }
 
-  .\31\/12--retina {
+  .\31-12--retina {
     width: 8.33333%;
   }
 
-  .\35\/12--retina {
+  .\35-12--retina {
     width: 41.66667%;
   }
 
-  .\37\/12--retina {
+  .\37-12--retina {
     width: 58.33333%;
   }
 
-  .\3131\/12--retina {
+  .\3131-12--retina {
     width: 91.66667%;
   }
 }
@@ -5589,6 +6051,47 @@ label {
   font-size: 11px;
 }
 
+.contact {
+  width: 100px;
+  height: 100px;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(0,0,0, 0)), color-stop(50.5%, rgba(0,0,0, 1))) no-repeat top left/100% 100%;
+  background: -webkit-linear-gradient(top left, rgba(0,0,0, 0) 50%, rgba(0,0,0, 1) 50.5%) no-repeat top left/100% 100%;
+  background: -o-linear-gradient(top left, rgba(0,0,0, 0) 50%, rgba(0,0,0, 1) 50.5%) no-repeat top left/100% 100%;
+  background: linear-gradient(to bottom right, rgba(0,0,0, 0) 50%, rgba(0,0,0, 1) 50.5%) no-repeat top left/100% 100%;
+  color: rgba(255,255,255, 1);
+  font-size: 10px;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  -js-display: flex;
+  display: -webkit-box;
+  display: flex;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  -js-align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.copyright {
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -js-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: fixed;
+  left: -200px;
+  bottom: 190px;
+}
+
 .faq {
   padding: 10px;
 }
@@ -5646,7 +6149,8 @@ label {
 
 .logo {
   height: 100px;
-  font-size: 20vw;
+  font-size: 22px;
+  font-weight: bold;
   letter-spacing: 5px;
   -webkit-display: flex;
   -moz-display: flex;
@@ -5670,7 +6174,6 @@ label {
 
 @media screen and (max-width: 800px) {
   .logo {
-    font-size: 22px;
     padding: 10px;
   }
 }
@@ -6064,7 +6567,11 @@ label {
 
 .hiraku-open-btn-line::before,
 .hiraku-open-btn-line::after {
-  background: rgba(0,0,0, 1);
+  background: rgba(255,255,255, 1);
+}
+
+.hiraku-open-btn-line::after {
+  width: 25px;
 }
 
 .js-hiraku-offcanvas-btn {
@@ -6153,7 +6660,11 @@ label {
 
 .hiraku-open-btn-line::before,
 .hiraku-open-btn-line::after {
-  background: rgba(0,0,0, 1);
+  background: rgba(255,255,255, 1);
+}
+
+.hiraku-open-btn-line::after {
+  width: 25px;
 }
 
 .js-hiraku-offcanvas-btn {

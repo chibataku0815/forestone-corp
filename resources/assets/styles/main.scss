@@ -7,6 +7,8 @@
 // @import "~some-node-module";
 @import "~material-design-lite/src/_color-definitions.scss";
 @import "~hiraku/scss/hiraku";
+@import "~remodal/dist/remodal-default-theme";
+@import "~remodal/dist/remodal";
 // @import "~slick-carousel/slick/slick.scss";
 // @import "~slick-carousel/slick/slick-theme.scss";
 
@@ -33,6 +35,8 @@
 @import "components/buttons";
 @import "components/card";
 @import "components/chip";
+@import "components/contact";
+@import "components/copyright";
 @import "components/comments";
 @import "components/faq";
 @import "components/forms";
