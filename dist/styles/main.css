@@ -1017,7 +1017,6 @@ input {
 
 [type='submit'] {
   width: 100%;
-  font-size: 1.5rem;
   line-height: 2;
   font-weight: bold;
   color: rgba(255,255,255, 1);
@@ -6147,7 +6146,7 @@ label {
 }
 
 .icon {
-  font-size: 4rem;
+  font-size: 4rem !important;
 }
 
 .icon--navi {
