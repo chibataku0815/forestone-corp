@@ -6844,6 +6844,49 @@ label {
   display: flex;
 }
 
+/* デザインカスタマイズ */
+
+/* エラー個所をわかりやすく表示 */
+
+.wpcf7 {
+  /* 必須赤色表示 */
+}
+
+.wpcf7 .wpcf7-not-valid {
+  background: rgba(255,235,238, .8);
+}
+
+.wpcf7 .wpcf7-response-output {
+  margin: 10px 0 0;
+  padding: 8px 35px 8px 14px;
+}
+
+.wpcf7 .wpcf7-validation-errors {
+  color: rgba(229,115,115, .8);
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1px solid rgba(255,205,210, .8);
+          order: 1px solid rgba(255,205,210, .8);
+  background: rgba(255,235,238, .8);
+}
+
+.wpcf7 .wpcf7-mail-sent-ok {
+  color: rgba(255,255,255, 1);
+  border: none;
+  background-color: rgba(0,0,0, 1);
+}
+
+.wpcf7 .required {
+  color: #f00;
+}
+
+.wpcf7 .wpcf7-validation-errors {
+  border: none;
+}
+
+.sent .contact-form-7 {
+  display: none;
+}
+
 .alignnone {
   margin-left: 0;
   margin-right: 0;
