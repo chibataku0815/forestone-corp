@@ -10,19 +10,4 @@
   @include query(tablet) {
     background: unquote("rgba(#{$palette-grey-100}, 1)");
   }
-
-  &__text {
-    width: 80%;
-    padding: 10px;
-    @include vender(display, flex);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-
-    @include query(tablet) {
-      width: 100%;
-      padding: 0;
-    }
-  }
 }

@@ -7,7 +7,7 @@
 
   @include query(tablet) {
     padding: 10px;
-    font-size: 11px;
+    font-size: 0.5rem;
     @include vender(transform, rotate(0deg));
     position: static;
   }

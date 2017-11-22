@@ -5,12 +5,11 @@
   justify-content: center;
   align-items: center;
   color: unquote("rgba(#{$color-primary-dark}, 1)");
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
 
   @include query(tablet) {
     margin: 2vw;
-    font-size: 13px;
     line-height: 1.5;
   }
 
@@ -20,6 +19,6 @@
   }
 
   &__icon {
-    font-size: 30px;
+    font-size: 3rem;
   }
 }

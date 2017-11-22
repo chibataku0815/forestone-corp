@@ -16,7 +16,6 @@
     border-top: 2px solid unquote("rgba(#{$color-primary-dark}, 1)");
     border-bottom: 1px solid unquote("rgba(#{$color-black}, .1)");
     @include vender(display, flex);
-    font-size: 14px;
     font-weight: bold;
   }
 

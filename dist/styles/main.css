@@ -789,14 +789,14 @@ html {
   line-height: 2.8;
   letter-spacing: 2px;
   color: #333;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Avenir Mimo", Avenir, "Noto Sans Japanese", "\6E38\30B4\30B7\30C3\30AF", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   ProN W3", "Hiragino Kaku Gothic ProN", "\30E1\30A4\30EA\30AA", Meiryo, sans-serif;
 }
 
 @media screen and (max-width: 800px) {
   body,
   html {
-    letter-spacing: 1vw;
+    letter-spacing: 0.5vw;
   }
 }
 
@@ -805,10 +805,6 @@ body {
   margin: 0 auto;
   padding: 0;
   background-color: rgba(255,255,255, 1);
-}
-
-body > div {
-  font-size: 16px;
 }
 
 a {
@@ -851,10 +847,6 @@ img {
   color: rgba(255,255,255, 1);
 }
 
-p {
-  font-size: 14px;
-}
-
 main {
   max-width: 100%;
   min-height: 85vh;
@@ -881,7 +873,7 @@ table {
   background: rgba(255,255,255, 1);
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 table td,
@@ -922,7 +914,6 @@ select {
   -ms-background-size: 16px;
   -js-background-size: 16px;
   background-size: 16px;
-  font-size: 14px;
   border: 1px solid, rgba(0,0,0, .5);
   -js-border-radius: 4px;
   border-radius: 4px;
@@ -943,7 +934,6 @@ option {
 input {
   padding: 5px;
   border: 1px solid rgba(0,0,0, .2);
-  font-size: 14px;
   line-height: 2;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1026,7 +1016,7 @@ input {
 
 [type='submit'] {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.5rem;
   line-height: 2;
   font-weight: bold;
   color: rgba(255,255,255, 1);
@@ -1040,7 +1030,6 @@ textarea {
   padding: 10px;
   background: rgba(50, 50, 50, .1);
   border: none;
-  font-size: 14px;
 }
 
 textarea:placeholder-shown {
@@ -5845,7 +5834,6 @@ label {
   -js-display: flex;
   display: -webkit-box;
   display: flex;
-  font-size: 14px;
   font-weight: bold;
 }
 
@@ -5933,14 +5921,13 @@ label {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(10,10,10, 1);
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
   .button {
     margin: 2vw;
-    font-size: 13px;
     line-height: 1.5;
   }
 }
@@ -5951,7 +5938,7 @@ label {
 }
 
 .button__icon {
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .card {
@@ -5979,6 +5966,7 @@ label {
 .card__title {
   padding: 10px 0 5px;
   background-color: rgba(10,10,10, 1);
+  font-size: 3rem;
   -webkit-display: flex;
   -moz-display: flex;
   -ms-display: flex;
@@ -5996,7 +5984,6 @@ label {
 
 .card__title-text {
   color: rgba(255,255,255, 1);
-  font-size: 20px;
   font-weight: bold;
 }
 
@@ -6005,7 +5992,6 @@ label {
   min-height: 85px;
   background: rgba(255,255,255, 1);
   border-bottom: 1px dotted rgba(10,10,10, 1);
-  font-size: 14px;
 }
 
 @media screen and (max-width: 800px) {
@@ -6017,13 +6003,13 @@ label {
 }
 
 .card__strong-text {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .card__sub-text {
   padding: 10px;
-  font-size: 12px;
+  font-size: 0.5rem;
   -webkit-display: flex;
   -moz-display: flex;
   -ms-display: flex;
@@ -6054,7 +6040,7 @@ label {
 }
 
 .chip__text {
-  font-size: 11px;
+  font-size: 0.5rem;
 }
 
 .contact {
@@ -6066,7 +6052,6 @@ label {
   background: -o-linear-gradient(top left, rgba(0,0,0, 0) 50%, rgba(0,0,0, 1) 50.5%) no-repeat top left/100% 100%;
   background: linear-gradient(to bottom right, rgba(0,0,0, 0) 50%, rgba(0,0,0, 1) 50.5%) no-repeat top left/100% 100%;
   color: rgba(255,255,255, 1);
-  font-size: 14px;
   -webkit-display: flex;
   -moz-display: flex;
   -ms-display: flex;
@@ -6121,7 +6106,7 @@ label {
 @media screen and (max-width: 800px) {
   .copyright {
     padding: 10px;
-    font-size: 11px;
+    font-size: 0.5rem;
     -webkit-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -js-transform: rotate(0deg);
@@ -6149,7 +6134,7 @@ label {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(10,10,10, 1);
-  font-size: 20px;
+  font-size: 1.5rem;
   border-bottom: 1px solid rgba(0,0,0, .1);
   cursor: pointer;
 }
@@ -6160,7 +6145,7 @@ label {
 }
 
 .icon {
-  font-size: 45px;
+  font-size: 4rem;
 }
 
 .icon--navi {
@@ -6218,7 +6203,7 @@ label {
 
 .logo {
   height: 100px;
-  font-size: 22px;
+  font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 5px;
   -webkit-display: flex;
@@ -6277,36 +6262,6 @@ label {
 @media screen and (max-width: 800px) {
   .main-visual {
     background: rgba(245,245,245, 1);
-  }
-}
-
-.main-visual__text {
-  width: 80%;
-  padding: 10px;
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  -o-display: flex;
-  -js-display: flex;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 12px;
-}
-
-@media screen and (max-width: 800px) {
-  .main-visual__text {
-    width: 100%;
-    padding: 0;
   }
 }
 
@@ -6385,7 +6340,6 @@ label {
   border-radius: 5px 5px 0 0;
   background: rgba(10,10,10, 1);
   color: rgba(255,255,255, 1);
-  font-size: 14px;
   font-weight: bold;
   -webkit-display: inline-flex;
   -moz-display: inline-flex;
@@ -6553,7 +6507,6 @@ label {
 }
 
 .text {
-  font-size: 14px;
   line-height: 1.8;
 }
 

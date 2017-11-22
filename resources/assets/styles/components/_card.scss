@@ -18,6 +18,7 @@
   &__title {
     padding: 10px 0 5px;
     background-color: unquote("rgba(#{$color-primary-dark}, 1)");
+    font-size: 3rem;
     @include vender(display, flex);
     justify-content: center;
     align-items: center;
@@ -25,7 +26,6 @@
 
   &__title-text {
     color: unquote("rgba(#{$color-white}, 1)");
-    font-size: 20px;
     font-weight: bold;
   }
 
@@ -34,7 +34,6 @@
     min-height: 85px;
     background: unquote("rgba(#{$color-white}, 1)");
     border-bottom: 1px dotted unquote("rgba(#{$color-primary-dark}, 1)");
-    font-size: 14px;
 
     @include query(tablet) {
       min-height: fit-content;
@@ -42,13 +41,13 @@
   }
 
   &__strong-text {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
   }
 
   &__sub-text {
     padding: 10px;
-    font-size: 12px;
+    font-size: 0.5rem;
     @include vender(display, flex);
     justify-content: center;
     align-items: center;

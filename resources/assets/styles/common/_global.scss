@@ -12,10 +12,10 @@ html {
   line-height: 2.8;
   letter-spacing: 2px;
   @include query(tablet) {
-    letter-spacing: 1vw;
+    letter-spacing: 0.5vw;
   }
   color: #333;
-  font-size: 15px;
+  font-size: 14px;
   font-family: $font__primary;
 }
 
@@ -24,10 +24,6 @@ body {
   margin: 0 auto;
   padding: 0;
   background-color: unquote("rgba(#{$color-white}, 1)");
-}
-
-body > div {
-  font-size: 16px;
 }
 
 a {
@@ -61,10 +57,6 @@ img {
   color: unquote("rgba(#{$color-white}, 1)");
 }
 
-p {
-  font-size: 14px;
-}
-
 main {
   max-width: 100%;
   min-height: 85vh;
@@ -91,7 +83,7 @@ table {
   background: unquote("rgba(#{$color-white}, 1)");
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 14px;
+  font-size: 0.8rem;
 
   td,
   th {
@@ -132,7 +124,6 @@ select {
   padding: 7px;
   background: image-url("forms/common/arr.png") no-repeat 98% 50% unquote("rgba(#{$color-white}, .8)");
   @include vender(background-size, 16px);
-  font-size: 14px;
   border: 1px solid, unquote("rgba(#{$color-black}, .5)");
   @include vender(border-radius, 4px);
   @include vender(appearance, none);
@@ -147,7 +138,6 @@ option {
 input {
   padding: 5px;
   border: 1px solid unquote("rgba(#{$color-black}, .2)");
-  font-size: 14px;
   line-height: 2;
   @include vender(appearance, none);
 }
@@ -216,7 +206,7 @@ input {
 
 [type='submit'] {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.5rem;
   line-height: 2;
   font-weight: bold;
   color: unquote("rgba(#{$color-white}, 1)");
@@ -230,7 +220,6 @@ textarea {
   padding: 10px;
   background: unquote("rgba(#{$color-primary-light}, .1)");
   border: none;
-  font-size: 14px;
 
   &:placeholder-shown {
     color: unquote("rgba(#{$color-primary-light}, .5)");

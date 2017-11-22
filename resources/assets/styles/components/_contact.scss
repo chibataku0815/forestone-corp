@@ -4,7 +4,6 @@
   padding-right: 5px;
   background: linear-gradient(to bottom right, unquote("rgba(#{$color-black}, 0)") 50%, unquote("rgba(#{$color-black}, 1)") 50.5%) no-repeat top left/100% 100%;
   color: unquote("rgba(#{$color-white}, 1)");
-  font-size: 14px;
   @include vender(display, flex);
   @include vender(align-items, flex-end);
   justify-content: flex-end;

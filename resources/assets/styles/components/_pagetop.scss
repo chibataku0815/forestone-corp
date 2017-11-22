@@ -8,7 +8,6 @@
     border-radius: 5px 5px 0 0;
     background: unquote("rgba(#{$color-primary-dark}, 1)");
     color: unquote("rgba(#{$color-white}, 1)");
-    font-size: 14px;
     font-weight: bold;
     @include vender(display, inline-flex);
     justify-content: center;
