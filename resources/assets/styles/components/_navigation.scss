@@ -4,6 +4,11 @@
   @include vender(display, flex);
   justify-content: space-between;
 
+  @include query(tablet) {
+    height: auto;
+    flex-direction: column;
+  }
+
   &--hide-phone {
     @include query(tablet) {
       display: none;

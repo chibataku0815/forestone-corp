@@ -6566,7 +6566,7 @@ Router.prototype.loadEvents = function loadEvents () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hiraku___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hiraku__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slick_carousel__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slick_carousel__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_remodal__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_remodal__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_remodal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_remodal__);
 
 
@@ -9837,43 +9837,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 12 */,
-/* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
-  init: function init() {
-    // JavaScript to be fired on the home page
-  },
-  finalize: function finalize() {
-    // JavaScript to be fired on the home page, after the init JS
-  },
-});
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
-  init: function init() {
-    // JavaScript to be fired on the about us page
-  },
-});
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 16 */,
-/* 17 */,
-/* 18 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -10663,6 +10627,39 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
   });
 });
 
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+  init: function init() {
+    // JavaScript to be fired on the home page
+  },
+  finalize: function finalize() {
+    // JavaScript to be fired on the home page, after the init JS
+  },
+});
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+  init: function init() {
+    // JavaScript to be fired on the about us page
+  },
+});
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

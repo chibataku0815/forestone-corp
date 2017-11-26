@@ -176,8 +176,8 @@
     }
   }
 }
-@if $av-enable-grid-flush {
-  .#{avCreateBlockClassName('flush')} {
+@if $av-enable-grid-no-spacing {
+  .#{avCreateBlockClassName('no-spacing')} {
     margin-left: 0;
 
     > .#{avCreateElementClassName()} {
