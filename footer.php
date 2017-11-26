@@ -8,7 +8,7 @@
 
 ?>
 
-	<footer id="" class="grid">
+	<footer id="footer" class="grid">
 		<a class="contact" data-remodal-target="modal">
 			<div class="contact__text">contact</div>
 		</a>

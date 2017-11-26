@@ -10,10 +10,7 @@
   <a href="/" class="js-hiraku__list">
     About
   </a>
-  <a href="/blog" class="js-hiraku__list">
-    blog
-  </a>
-  <a class="js-hiraku__list"　data-remodal-target="modal">
+  <a href="/#footer" class="js-hiraku__list"　data-remodal-target="modal">
     Contact
   </a>
 </div>
