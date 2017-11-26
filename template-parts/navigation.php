@@ -13,7 +13,7 @@
   <a href="/blog" class="js-hiraku__list">
     blog
   </a>
-  <a href="" class="js-hiraku__list">
+  <a class="js-hiraku__list"　data-remodal-target="modal">
     Contact
   </a>
 </div>
